@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface MainViewController : UIViewController
 
+- (IBAction)btnFacebookClick:(id)sender;
+- (IBAction)btnTwitterClick:(id)sender;
 
 @end
 
