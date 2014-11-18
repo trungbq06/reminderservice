@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E194ACD6-D8AA-482D-B1F8-FE07456D854B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ReminderService</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DFD19E3DEF0068B9376E8F7776B948E638DE897E</key>
+		<string>https://github.com/trungbq06/reminderservice.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ReminderService.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DFD19E3DEF0068B9376E8F7776B948E638DE897E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/trungbq06/reminderservice.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DFD19E3DEF0068B9376E8F7776B948E638DE897E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DFD19E3DEF0068B9376E8F7776B948E638DE897E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>reminderservice</string>
+		</dict>
+	</array>
+</dict>
+</plist>
