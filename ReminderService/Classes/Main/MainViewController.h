@@ -11,8 +11,13 @@
 
 @interface MainViewController : UIViewController
 
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtEmail;
+@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtPassword;
+
 - (IBAction)btnFacebookClick:(id)sender;
 - (IBAction)btnTwitterClick:(id)sender;
+- (IBAction)btnSignInClick:(id)sender;
+- (IBAction)btnRegisterClick:(id)sender;
 
 @end
 

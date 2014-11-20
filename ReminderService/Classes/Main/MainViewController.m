@@ -8,8 +8,12 @@
 
 #import "MainViewController.h"
 #import <Accounts/Accounts.h>
+#import "PasswordViewController.h"
+#import "RegisterViewController.h"
 #import "FHSTwitterEngine.h"
 #import "AppDelegate.h"
+#import "AFNetworkingSingleton.h"
+#import "SVProgressHUD.h"
 
 // The twitter API key you setup in the Twitter developer console
 static NSString * const kTwitterAPIKey = @"KOW7ZDftiz1nn1DpMOEsELnkb";
@@ -39,6 +43,9 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
                                                              NSError *error) {
                 // we recurse here, in order to update buttons and labels
                 [self loggedIn];
+//                PasswordViewController *forgetController = [[PasswordViewController alloc] initWithNibName:@"PasswordViewController" bundle:nil];
+//                
+//                [self.navigationController pushViewController:forgetController animated:YES];
             }];
         }
     }
@@ -94,6 +101,16 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         
     }];
     [self presentViewController:loginController animated:YES completion:nil];
+}
+
+- (IBAction)btnSignInClick:(id)sender {
+    
+}
+
+- (IBAction)btnRegisterClick:(id)sender {
+    RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:registerController animated:YES];
 }
 
 #pragma mark - FHSTwitter Engine
