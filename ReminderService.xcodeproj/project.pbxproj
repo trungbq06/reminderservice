@@ -97,6 +97,34 @@
 		37EC9E121A1E108600812CD3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */; };
 		37EC9E131A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
 		37EC9E141A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
+		6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9771A1FF42B004B68E8 /* DashboardViewController.m */; };
+		6751A97A1A1FF42B004B68E8 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9771A1FF42B004B68E8 /* DashboardViewController.m */; };
+		6751A97B1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */; };
+		6751A97C1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */; };
+		6751A9851A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9801A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m */; };
+		6751A9861A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9801A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m */; };
+		6751A9871A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9821A1FF5D1004B68E8 /* MFSideMenuShadow.m */; };
+		6751A9881A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9821A1FF5D1004B68E8 /* MFSideMenuShadow.m */; };
+		6751A9891A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9841A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m */; };
+		6751A98A1A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9841A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m */; };
+		6751A98F1A1FF611004B68E8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A98D1A1FF611004B68E8 /* MenuViewController.m */; };
+		6751A9901A1FF611004B68E8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A98D1A1FF611004B68E8 /* MenuViewController.m */; };
+		6751A9911A1FF611004B68E8 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A98E1A1FF611004B68E8 /* MenuViewController.xib */; };
+		6751A9921A1FF611004B68E8 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A98E1A1FF611004B68E8 /* MenuViewController.xib */; };
+		6751A9951A1FF9C4004B68E8 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9941A1FF9C4004B68E8 /* menu.png */; };
+		6751A9961A1FF9C4004B68E8 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9941A1FF9C4004B68E8 /* menu.png */; };
+		6751A99B1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9991A1FFF2C004B68E8 /* DashboardTableViewCell.m */; };
+		6751A99C1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9991A1FFF2C004B68E8 /* DashboardTableViewCell.m */; };
+		6751A99D1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A99A1A1FFF2C004B68E8 /* DashboardTableViewCell.xib */; };
+		6751A99E1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A99A1A1FFF2C004B68E8 /* DashboardTableViewCell.xib */; };
+		6751A9A21A200543004B68E8 /* RenewalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A01A200543004B68E8 /* RenewalViewController.m */; };
+		6751A9A31A200543004B68E8 /* RenewalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A01A200543004B68E8 /* RenewalViewController.m */; };
+		6751A9A41A200543004B68E8 /* RenewalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A11A200543004B68E8 /* RenewalViewController.xib */; };
+		6751A9A51A200543004B68E8 /* RenewalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A11A200543004B68E8 /* RenewalViewController.xib */; };
+		6751A9A91A2008A1004B68E8 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */; };
+		6751A9AA1A2008A1004B68E8 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */; };
+		6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
+		6751A9AC1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +211,30 @@
 		37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		37EC9E0F1A1E108600812CD3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		37EC9E101A1E108600812CD3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		6751A9761A1FF42B004B68E8 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
+		6751A9771A1FF42B004B68E8 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
+		6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		6751A97E1A1FF5D1004B68E8 /* MFSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenu.h; sourceTree = "<group>"; };
+		6751A97F1A1FF5D1004B68E8 /* MFSideMenuContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuContainerViewController.h; sourceTree = "<group>"; };
+		6751A9801A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuContainerViewController.m; sourceTree = "<group>"; };
+		6751A9811A1FF5D1004B68E8 /* MFSideMenuShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFSideMenuShadow.h; sourceTree = "<group>"; };
+		6751A9821A1FF5D1004B68E8 /* MFSideMenuShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFSideMenuShadow.m; sourceTree = "<group>"; };
+		6751A9831A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MFSideMenuAdditions.h"; sourceTree = "<group>"; };
+		6751A9841A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MFSideMenuAdditions.m"; sourceTree = "<group>"; };
+		6751A98C1A1FF611004B68E8 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		6751A98D1A1FF611004B68E8 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		6751A98E1A1FF611004B68E8 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		6751A9931A1FF6BB004B68E8 /* Reminder.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.pch; sourceTree = "<group>"; };
+		6751A9941A1FF9C4004B68E8 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		6751A9981A1FFF2C004B68E8 /* DashboardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardTableViewCell.h; sourceTree = "<group>"; };
+		6751A9991A1FFF2C004B68E8 /* DashboardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardTableViewCell.m; sourceTree = "<group>"; };
+		6751A99A1A1FFF2C004B68E8 /* DashboardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardTableViewCell.xib; sourceTree = "<group>"; };
+		6751A99F1A200543004B68E8 /* RenewalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenewalViewController.h; sourceTree = "<group>"; };
+		6751A9A01A200543004B68E8 /* RenewalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenewalViewController.m; sourceTree = "<group>"; };
+		6751A9A11A200543004B68E8 /* RenewalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RenewalViewController.xib; sourceTree = "<group>"; };
+		6751A9A61A2008A1004B68E8 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
+		6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
+		6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReminderViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +263,7 @@
 		378FCF551A1B79E000E12BBE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				6751A97D1A1FF5D1004B68E8 /* MFSideMenu */,
 				37EC9E151A1E10A800812CD3 /* Common */,
 				37EC9E0D1A1E108600812CD3 /* SVProgressHUD */,
 				37EC9DDF1A1E0C6500812CD3 /* AFNetworking */,
@@ -274,6 +327,7 @@
 			children = (
 				37E3F2A91A19B27B00BF609B /* Info.plist */,
 				37E3F2AA1A19B27B00BF609B /* main.m */,
+				6751A9931A1FF6BB004B68E8 /* Reminder.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -298,6 +352,7 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6751A9941A1FF9C4004B68E8 /* menu.png */,
 				37EC9DDC1A1E0A5D00812CD3 /* btn_back.png */,
 				37EC9DD01A1E084B00812CD3 /* mobile.png */,
 				37EC9DD11A1E084B00812CD3 /* pencil.png */,
@@ -324,6 +379,10 @@
 		37E3F2D21A1A0C5E00BF609B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6751A98B1A1FF602004B68E8 /* Menu */,
+				6751A9731A1FF413004B68E8 /* AddReminder */,
+				6751A9741A1FF413004B68E8 /* Dashboard */,
+				6751A9751A1FF413004B68E8 /* Renewal */,
 				37EC9DC81A1E06AC00812CD3 /* Register */,
 				37EC9DAD1A1DF8EE00812CD3 /* Password */,
 				37E3F2D31A1A0C7F00BF609B /* Main */,
@@ -405,6 +464,71 @@
 			children = (
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		6751A9731A1FF413004B68E8 /* AddReminder */ = {
+			isa = PBXGroup;
+			children = (
+				6751A9A61A2008A1004B68E8 /* AddReminderViewController.h */,
+				6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */,
+				6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */,
+			);
+			path = AddReminder;
+			sourceTree = "<group>";
+		};
+		6751A9741A1FF413004B68E8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				6751A9761A1FF42B004B68E8 /* DashboardViewController.h */,
+				6751A9771A1FF42B004B68E8 /* DashboardViewController.m */,
+				6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */,
+				6751A9971A1FFF12004B68E8 /* Model */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6751A9751A1FF413004B68E8 /* Renewal */ = {
+			isa = PBXGroup;
+			children = (
+				6751A99F1A200543004B68E8 /* RenewalViewController.h */,
+				6751A9A01A200543004B68E8 /* RenewalViewController.m */,
+				6751A9A11A200543004B68E8 /* RenewalViewController.xib */,
+			);
+			path = Renewal;
+			sourceTree = "<group>";
+		};
+		6751A97D1A1FF5D1004B68E8 /* MFSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				6751A97E1A1FF5D1004B68E8 /* MFSideMenu.h */,
+				6751A97F1A1FF5D1004B68E8 /* MFSideMenuContainerViewController.h */,
+				6751A9801A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m */,
+				6751A9811A1FF5D1004B68E8 /* MFSideMenuShadow.h */,
+				6751A9821A1FF5D1004B68E8 /* MFSideMenuShadow.m */,
+				6751A9831A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.h */,
+				6751A9841A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m */,
+			);
+			path = MFSideMenu;
+			sourceTree = "<group>";
+		};
+		6751A98B1A1FF602004B68E8 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6751A98C1A1FF611004B68E8 /* MenuViewController.h */,
+				6751A98D1A1FF611004B68E8 /* MenuViewController.m */,
+				6751A98E1A1FF611004B68E8 /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		6751A9971A1FFF12004B68E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6751A9981A1FFF2C004B68E8 /* DashboardTableViewCell.h */,
+				6751A9991A1FFF2C004B68E8 /* DashboardTableViewCell.m */,
+				6751A99A1A1FFF2C004B68E8 /* DashboardTableViewCell.xib */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,6 +615,7 @@
 				37E3F2E61A1A1FED00BF609B /* facebook_btn.png in Resources */,
 				37EC9DD81A1E084B00812CD3 /* register_bg.png in Resources */,
 				37E3F2EC1A1A1FED00BF609B /* register_btn.png in Resources */,
+				6751A9951A1FF9C4004B68E8 /* menu.png in Resources */,
 				37E3F2DD1A1A0D0B00BF609B /* login_bg@2x.png in Resources */,
 				37E3F2E81A1A1FED00BF609B /* form_bg.png in Resources */,
 				37EC9DDA1A1E084B00812CD3 /* tick.png in Resources */,
@@ -501,6 +626,7 @@
 				37E3F2DF1A1A0D0B00BF609B /* login_bg@3x.png in Resources */,
 				37EC9DDD1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DBF1A1DFA1C00812CD3 /* app_bg.png in Resources */,
+				6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */,
 				37E3F2B71A19B27B00BF609B /* Main.storyboard in Resources */,
 				37E3F2BC1A19B27B00BF609B /* LaunchScreen.xib in Resources */,
 				37E3F2B91A19B27B00BF609B /* Images.xcassets in Resources */,
@@ -508,8 +634,12 @@
 				37EC9DC61A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
 				37EC9DD61A1E084B00812CD3 /* pencil.png in Resources */,
 				37E3F2EE1A1A1FED00BF609B /* twitter_btn.png in Resources */,
+				6751A99D1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */,
+				6751A9A41A200543004B68E8 /* RenewalViewController.xib in Resources */,
 				37EC9DCE1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
+				6751A9911A1FF611004B68E8 /* MenuViewController.xib in Resources */,
 				37EC9DD41A1E084B00812CD3 /* mobile.png in Resources */,
+				6751A97B1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */,
 				37E3F2EA1A1A1FED00BF609B /* login_btn.png in Resources */,
 				37EC9DB81A1DF9BE00812CD3 /* hand_bg.png in Resources */,
 			);
@@ -521,14 +651,17 @@
 			files = (
 				37E3F2F31A1A209900BF609B /* email_icon.png in Resources */,
 				37E3F2EF1A1A1FED00BF609B /* twitter_btn.png in Resources */,
+				6751A9A51A200543004B68E8 /* RenewalViewController.xib in Resources */,
 				37E3F2E71A1A1FED00BF609B /* facebook_btn.png in Resources */,
 				37E3F2ED1A1A1FED00BF609B /* register_btn.png in Resources */,
+				6751A99E1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */,
 				37EC9DBD1A1DF9BE00812CD3 /* forgot_pass_bg.png in Resources */,
 				37E3F2DC1A1A0D0B00BF609B /* login_bg.png in Resources */,
 				37EC9DDB1A1E084B00812CD3 /* tick.png in Resources */,
 				37EC9DD71A1E084B00812CD3 /* pencil.png in Resources */,
 				37EC9DB91A1DF9BE00812CD3 /* hand_bg.png in Resources */,
 				37E3F2EB1A1A1FED00BF609B /* login_btn.png in Resources */,
+				6751A9AC1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */,
 				37E3F2E91A1A1FED00BF609B /* form_bg.png in Resources */,
 				37EC9DD91A1E084B00812CD3 /* register_bg.png in Resources */,
 				37EC9DBB1A1DF9BE00812CD3 /* logo_bg.png in Resources */,
@@ -538,7 +671,10 @@
 				37EC9DC71A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
 				37EC9DDE1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DC01A1DFA1C00812CD3 /* app_bg.png in Resources */,
+				6751A9921A1FF611004B68E8 /* MenuViewController.xib in Resources */,
 				37E3F2F51A1A209900BF609B /* password_icon.png in Resources */,
+				6751A9961A1FF9C4004B68E8 /* menu.png in Resources */,
+				6751A97C1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */,
 				37EC9DCF1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
 				37EC9E121A1E108600812CD3 /* SVProgressHUD.bundle in Resources */,
 			);
@@ -551,24 +687,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6751A9A91A2008A1004B68E8 /* AddReminderViewController.m in Sources */,
 				37EC9E0B1A1E0C8900812CD3 /* AFNetworkingSynchronousSingleton.m in Sources */,
 				37E3F2B11A19B27B00BF609B /* ReminderService.xcdatamodeld in Sources */,
 				37EC9E031A1E0C6500812CD3 /* UIImageView+AFNetworking.m in Sources */,
 				37E3F2AE1A19B27B00BF609B /* AppDelegate.m in Sources */,
 				37EC9DF91A1E0C6500812CD3 /* AFJSONRequestOperation.m in Sources */,
 				37EC9DF51A1E0C6500812CD3 /* AFHTTPRequestOperation.m in Sources */,
+				6751A9871A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */,
+				6751A9A21A200543004B68E8 /* RenewalViewController.m in Sources */,
 				37EC9E011A1E0C6500812CD3 /* AFXMLRequestOperation.m in Sources */,
 				37EC9DFF1A1E0C6500812CD3 /* AFURLConnectionOperation.m in Sources */,
+				6751A98F1A1FF611004B68E8 /* MenuViewController.m in Sources */,
 				37EC9DF71A1E0C6500812CD3 /* AFImageRequestOperation.m in Sources */,
 				37EC9DF31A1E0C6500812CD3 /* AFHTTPClient.m in Sources */,
+				6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */,
 				37E3F2D61A1A0C7F00BF609B /* MainViewController.m in Sources */,
 				37E3F2AB1A19B27B00BF609B /* main.m in Sources */,
+				6751A9851A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */,
+				6751A99B1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */,
 				37EC9DFD1A1E0C6500812CD3 /* AFPropertyListRequestOperation.m in Sources */,
 				37EC9E091A1E0C8900812CD3 /* AFNetworkingSingleton.m in Sources */,
 				37EC9DC41A1DFF9100812CD3 /* PasswordViewController.m in Sources */,
 				37EC9DFB1A1E0C6500812CD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				378FCF631A1B7CDA00E12BBE /* FHSStream.m in Sources */,
 				37EC9E131A1E108600812CD3 /* SVProgressHUD.m in Sources */,
+				6751A9891A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				378FCF651A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */,
 				37EC9DCC1A1E06BC00812CD3 /* RegisterViewController.m in Sources */,
 			);
@@ -578,24 +722,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6751A9A31A200543004B68E8 /* RenewalViewController.m in Sources */,
 				37EC9E001A1E0C6500812CD3 /* AFURLConnectionOperation.m in Sources */,
+				6751A9AA1A2008A1004B68E8 /* AddReminderViewController.m in Sources */,
 				37EC9E041A1E0C6500812CD3 /* UIImageView+AFNetworking.m in Sources */,
+				6751A97A1A1FF42B004B68E8 /* DashboardViewController.m in Sources */,
 				378FCF661A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */,
 				37EC9DCD1A1E06BC00812CD3 /* RegisterViewController.m in Sources */,
 				37EC9E0A1A1E0C8900812CD3 /* AFNetworkingSingleton.m in Sources */,
+				6751A99C1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */,
 				37EC9E141A1E108600812CD3 /* SVProgressHUD.m in Sources */,
 				37EC9DFE1A1E0C6500812CD3 /* AFPropertyListRequestOperation.m in Sources */,
 				37E3F2D71A1A0C7F00BF609B /* MainViewController.m in Sources */,
+				6751A9861A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */,
 				37E3F2C81A19B27B00BF609B /* ReminderServiceTests.m in Sources */,
 				37EC9E021A1E0C6500812CD3 /* AFXMLRequestOperation.m in Sources */,
 				37EC9E0C1A1E0C8900812CD3 /* AFNetworkingSynchronousSingleton.m in Sources */,
+				6751A98A1A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				37EC9DFC1A1E0C6500812CD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				37EC9DF61A1E0C6500812CD3 /* AFHTTPRequestOperation.m in Sources */,
 				378FCF641A1B7CDA00E12BBE /* FHSStream.m in Sources */,
+				6751A9881A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */,
 				37EC9DF81A1E0C6500812CD3 /* AFImageRequestOperation.m in Sources */,
 				37EC9DF41A1E0C6500812CD3 /* AFHTTPClient.m in Sources */,
 				37EC9DFA1A1E0C6500812CD3 /* AFJSONRequestOperation.m in Sources */,
 				37EC9DC51A1DFF9100812CD3 /* PasswordViewController.m in Sources */,
+				6751A9901A1FF611004B68E8 /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +865,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReminderService/Reminder.pch;
 				INFOPLIST_FILE = ReminderService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -727,7 +882,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ReminderService/Reminder.pch;
 				INFOPLIST_FILE = ReminderService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

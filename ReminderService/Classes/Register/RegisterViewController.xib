@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
@@ -21,88 +22,78 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" id="kEn-dq-Vtd">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="kEn-dq-Vtd">
+                    <rect key="frame" x="-353" y="0.0" width="1081" height="1920"/>
                 </imageView>
-                <view contentMode="scaleToFill" id="pMB-KL-q3G">
-                    <rect key="frame" x="50" y="143" width="275" height="508"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="sEM-92-k3a">
+                    <rect key="frame" x="84" y="47" width="207" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="207" id="JV6-Rz-08P"/>
+                        <constraint firstAttribute="height" constant="51" id="X1U-ru-mkc"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pMB-KL-q3G">
+                    <rect key="frame" x="50" y="106" width="275" height="473"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_bg.png" id="IGL-xR-17P">
-                            <rect key="frame" x="0.0" y="0.0" width="275" height="508"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="register_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="IGL-xR-17P">
+                            <rect key="frame" x="0.0" y="0.0" width="275" height="460"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register it's very simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qc8-uZ-uwB">
-                            <rect key="frame" x="16" y="37" width="154" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Register it's very simple" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qc8-uZ-uwB">
+                            <rect key="frame" x="16" y="33" width="154" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.png" id="fIP-c2-j93">
-                            <rect key="frame" x="37" y="125" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.png" translatesAutoresizingMaskIntoConstraints="NO" id="fIP-c2-j93">
+                            <rect key="frame" x="38" y="106" width="25" height="25"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" id="mTl-0W-0i6">
-                            <rect key="frame" x="77" y="120" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-0W-0i6">
+                            <rect key="frame" x="78" y="101" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.png" id="Cvx-RO-OYq">
-                            <rect key="frame" x="37" y="172" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cvx-RO-OYq">
+                            <rect key="frame" x="38" y="149" width="25" height="25"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Surname" minimumFontSize="17" id="AJB-CL-OgN">
-                            <rect key="frame" x="77" y="167" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Surname" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJB-CL-OgN">
+                            <rect key="frame" x="78" y="144" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_icon.png" id="NKM-TG-kw8">
-                            <rect key="frame" x="37" y="228" width="25" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="NKM-TG-kw8">
+                            <rect key="frame" x="38" y="198" width="25" height="17"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" minimumFontSize="17" id="Fur-3W-HKM">
-                            <rect key="frame" x="77" y="219" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fur-3W-HKM">
+                            <rect key="frame" x="78" y="189" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_icon.png" id="bdi-ai-bHH">
-                            <rect key="frame" x="37" y="277" width="25" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="bdi-ai-bHH">
+                            <rect key="frame" x="38" y="243" width="25" height="17"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm email" minimumFontSize="17" id="3rX-LW-mgr">
-                            <rect key="frame" x="77" y="268" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rX-LW-mgr">
+                            <rect key="frame" x="78" y="234" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mobile.png" id="KlM-eB-idD">
-                            <rect key="frame" x="37" y="321" width="25" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mobile.png" translatesAutoresizingMaskIntoConstraints="NO" id="KlM-eB-idD">
+                            <rect key="frame" x="38" y="284" width="25" height="22"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" id="MKx-vC-UV4">
-                            <rect key="frame" x="77" y="314" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKx-vC-UV4">
+                            <rect key="frame" x="78" y="277" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password_icon.png" id="cPd-kg-AYx">
-                            <rect key="frame" x="37" y="366" width="20" height="26"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPd-kg-AYx">
+                            <rect key="frame" x="38" y="326" width="20" height="26"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="osj-y6-HYy">
-                            <rect key="frame" x="77" y="361" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osj-y6-HYy">
+                            <rect key="frame" x="78" y="321" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kvw-by-oMl">
-                            <rect key="frame" x="32" y="413" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-by-oMl">
+                            <rect key="frame" x="33" y="370" width="30" height="30"/>
                             <state key="normal" backgroundImage="tick.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -110,16 +101,14 @@
                                 <action selector="btnAgreeClick:" destination="-1" eventType="touchUpInside" id="kvF-ce-1ab"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agree to terms &amp; conditions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zdk-sF-nhD">
-                            <rect key="frame" x="70" y="417" width="214" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to terms &amp; conditions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-sF-nhD">
+                            <rect key="frame" x="71" y="374" width="214" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Kdy-5M-isT">
-                            <rect key="frame" x="15" y="457" width="244" height="38"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-5M-isT">
+                            <rect key="frame" x="16" y="415" width="244" height="38"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <state key="normal" title="Register" backgroundImage="login_btn.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -129,22 +118,27 @@
                                 <action selector="btnRegisterClick:" destination="-1" eventType="touchUpInside" id="VgZ-2K-Av3"/>
                             </connections>
                         </button>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.png" id="cBU-Wp-SxR">
-                            <rect key="frame" x="37" y="78" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.png" translatesAutoresizingMaskIntoConstraints="NO" id="cBU-Wp-SxR">
+                            <rect key="frame" x="38" y="63" width="25" height="25"/>
                         </imageView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" id="0a0-hl-cdD">
-                            <rect key="frame" x="77" y="73" width="176" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0a0-hl-cdD">
+                            <rect key="frame" x="78" y="58" width="176" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="275" id="TMj-m9-oe3"/>
+                        <constraint firstAttribute="height" constant="473" id="b50-n5-Ew9"/>
+                    </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yVU-JG-vNd">
-                    <rect key="frame" x="8" y="33" width="12" height="18"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVU-JG-vNd">
+                    <rect key="frame" x="8" y="15" width="12" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="PFa-KP-3fz"/>
+                        <constraint firstAttribute="width" constant="12" id="WNk-ow-rcH"/>
+                    </constraints>
                     <state key="normal" backgroundImage="btn_back.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -152,9 +146,8 @@
                         <action selector="btnLoginClick:" destination="-1" eventType="touchUpInside" id="ZzK-WD-1pB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pwm-Yd-zE4">
-                    <rect key="frame" x="29" y="27" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwm-Yd-zE4">
+                    <rect key="frame" x="29" y="9" width="41" height="32"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="Login">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,15 +157,23 @@
                         <action selector="btnLoginClick:" destination="-1" eventType="touchUpInside" id="e7M-ZF-5Tn"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bg.png" id="sEM-92-k3a">
-                    <rect key="frame" x="67" y="75" width="240" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pMB-KL-q3G" firstAttribute="top" secondItem="sEM-92-k3a" secondAttribute="top" constant="59" id="6C7-4A-QrN"/>
+                <constraint firstItem="kEn-dq-Vtd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7K6-s0-8jV"/>
+                <constraint firstItem="pwm-Yd-zE4" firstAttribute="leading" secondItem="yVU-JG-vNd" secondAttribute="trailing" constant="9" id="9zm-1A-HXR"/>
+                <constraint firstItem="yVU-JG-vNd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="Rf3-oT-lSl"/>
+                <constraint firstItem="sEM-92-k3a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="47" id="ddd-Bo-nFZ"/>
+                <constraint firstItem="yVU-JG-vNd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="fSJ-6s-VVu"/>
+                <constraint firstAttribute="centerX" secondItem="pMB-KL-q3G" secondAttribute="centerX" id="ftS-k6-sEr"/>
+                <constraint firstAttribute="centerX" secondItem="kEn-dq-Vtd" secondAttribute="centerX" id="ghP-YH-570"/>
+                <constraint firstAttribute="centerX" secondItem="sEM-92-k3a" secondAttribute="centerX" id="ntX-Wf-QBj"/>
+                <constraint firstItem="pwm-Yd-zE4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="9" id="qDz-Zp-ZmC"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="1285.5" y="434.5"/>
+            <point key="canvasLocation" x="1070.5" y="447.5"/>
         </view>
     </objects>
     <resources>
@@ -187,9 +188,4 @@
         <image name="register_bg.png" width="794" height="1413"/>
         <image name="tick.png" width="75" height="75"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

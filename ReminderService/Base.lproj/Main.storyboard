@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="UuF-3b-F0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UuF-3b-F0g">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,39 +8,36 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L71-E4-oKl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rmm-75-ouN"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg@3x.png" id="kJp-Fq-l1W">
-                                <rect key="frame" x="-7" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-rC-vOM">
+                                <rect key="frame" x="-353" y="0.0" width="1081" height="1920"/>
                             </imageView>
-                            <view contentMode="scaleToFill" id="agY-7U-Jpi">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agY-7U-Jpi">
                                 <rect key="frame" x="43" y="147" width="288" height="284"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form_bg.png" id="LHO-So-AeH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="form_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-So-AeH">
                                         <rect key="frame" x="8" y="0.0" width="272" height="275"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="Qd4-fr-WFo">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qd4-fr-WFo">
                                         <rect key="frame" x="87" y="84" width="176" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email_icon.png" id="XnL-v7-X8t">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="XnL-v7-X8t">
                                         <rect key="frame" x="29" y="40" width="30" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password_icon.png" id="Nv4-RM-mKU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="password_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nv4-RM-mKU">
                                         <rect key="frame" x="29" y="88" width="25" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oGj-Be-dbj">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGj-Be-dbj">
                                         <rect key="frame" x="22" y="135" width="244" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Sign In" backgroundImage="login_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,9 +47,8 @@
                                             <action selector="btnSignInClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jPn-DE-A5V"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cYk-4U-xst">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-4U-xst">
                                         <rect key="frame" x="22" y="183" width="244" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Register (it's free)" backgroundImage="register_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,9 +58,8 @@
                                             <action selector="btnRegisterClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8jF-6o-zI8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zpj-4l-rZT">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpj-4l-rZT">
                                         <rect key="frame" x="22" y="229" width="97" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="    Sign In" backgroundImage="facebook_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -74,9 +69,8 @@
                                             <action selector="btnFacebookClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fqN-WV-PvJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="upd-mP-95y">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upd-mP-95y">
                                         <rect key="frame" x="169" y="229" width="97" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="    Sign In" backgroundImage="twitter_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,17 +80,35 @@
                                             <action selector="btnTwitterClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1kX-Hm-A2G"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" minimumFontSize="17" id="bdr-m0-Cpv">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdr-m0-Cpv">
                                         <rect key="frame" x="87" y="30" width="176" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="4Ws-yT-S7j"/>
+                                    <constraint firstAttribute="height" constant="284" id="Zkw-Wv-a5f"/>
+                                </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="pQh-on-aBf">
+                                <rect key="frame" x="67" y="59" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="c5G-W3-nat"/>
+                                    <constraint firstAttribute="width" constant="240" id="yYd-lp-CtN"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pQh-on-aBf" firstAttribute="top" secondItem="L71-E4-oKl" secondAttribute="bottom" constant="59" id="22k-U6-eDb"/>
+                            <constraint firstItem="2UH-rC-vOM" firstAttribute="top" secondItem="L71-E4-oKl" secondAttribute="bottom" id="AsL-I4-HT4"/>
+                            <constraint firstAttribute="centerX" secondItem="pQh-on-aBf" secondAttribute="centerX" id="iwY-rT-Y2Q"/>
+                            <constraint firstAttribute="centerX" secondItem="2UH-rC-vOM" secondAttribute="centerX" id="j7I-js-aD0"/>
+                            <constraint firstItem="agY-7U-Jpi" firstAttribute="centerY" secondItem="pQh-on-aBf" secondAttribute="centerY" constant="200" id="sHu-qi-w81"/>
+                            <constraint firstItem="agY-7U-Jpi" firstAttribute="leading" secondItem="pQh-on-aBf" secondAttribute="trailing" constant="-264" id="tWu-uO-NAb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cee-1g-5KD"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -107,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1017.5" y="141.5"/>
+            <point key="canvasLocation" x="-413.5" y="72.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lEi-Ir-AJ7">
@@ -124,22 +136,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgI-Ja-GZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="142"/>
+            <point key="canvasLocation" x="-996" y="98"/>
         </scene>
     </scenes>
     <resources>
+        <image name="app_bg.png" width="1080" height="1920"/>
         <image name="email_icon.png" width="60" height="39"/>
         <image name="facebook_btn.png" width="304" height="103"/>
         <image name="form_bg.png" width="794" height="813"/>
-        <image name="login_bg@3x.png" width="1080" height="1920"/>
         <image name="login_btn.png" width="671" height="103"/>
+        <image name="logo_bg.png" width="669" height="165"/>
         <image name="password_icon.png" width="49" height="65"/>
         <image name="register_btn.png" width="671" height="103"/>
         <image name="twitter_btn.png" width="304" height="103"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

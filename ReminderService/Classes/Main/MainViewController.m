@@ -13,6 +13,9 @@
 #import "FHSTwitterEngine.h"
 #import "AppDelegate.h"
 #import "AFNetworkingSingleton.h"
+#import "MFSideMenuContainerViewController.h"
+#import "MenuViewController.h"
+#import "DashboardViewController.h"
 #import "SVProgressHUD.h"
 
 // The twitter API key you setup in the Twitter developer console
@@ -56,8 +59,18 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 }
 
 - (void)loggedIn {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Successfull Logged In" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    MenuViewController *menuController = [[MenuViewController alloc] init];
+
+    DashboardViewController *contentController = [[DashboardViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];
+    navController.navigationBarHidden = TRUE;
+    
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:navController
+                                                    leftMenuViewController:menuController
+                                                    rightMenuViewController:nil];
+    
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:container];
 }
 
 - (void)didReceiveMemoryWarning {

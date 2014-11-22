@@ -1,0 +1,14 @@
+//
+//  Reminder.pch
+//  ReminderService
+//
+//  Created by TrungBQ on 11/21/14.
+//  Copyright (c) 2014 Mr Trung. All rights reserved.
+//
+
+#ifndef ReminderService_Reminder_pch
+#define ReminderService_Reminder_pch
+
+#import <UIKit/UIKit.h>
+
+#endif
