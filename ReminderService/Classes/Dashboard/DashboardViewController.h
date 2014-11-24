@@ -12,6 +12,10 @@
 @interface DashboardViewController : UIViewController < UITableViewDataSource, UITableViewDelegate >
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, retain) NSMutableArray     *lessData;
+@property (nonatomic, retain) NSMutableArray     *largeData;
+
 - (IBAction)btnMenuClick:(id)sender;
+- (IBAction)btnAddClick:(id)sender;
 
 @end

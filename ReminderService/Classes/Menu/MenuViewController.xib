@@ -24,6 +24,9 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="44" y="55" width="313" height="30"/>
                     </variation>
+                    <connections>
+                        <action selector="profileClick:" destination="-1" eventType="touchUpInside" id="o9K-iS-qd8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFR-Iq-Hct">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -35,6 +38,9 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="44" y="109" width="313" height="34"/>
                     </variation>
+                    <connections>
+                        <action selector="webSiteClick:" destination="-1" eventType="touchUpInside" id="k0r-2C-ZeM"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-nt-Mxk">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -46,6 +52,9 @@
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="44" y="160" width="313" height="34"/>
                     </variation>
+                    <connections>
+                        <action selector="logoutClick:" destination="-1" eventType="touchUpInside" id="N1S-Tq-rXB"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

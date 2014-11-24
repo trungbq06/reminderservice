@@ -10,4 +10,8 @@
 
 @interface MenuViewController : UIViewController
 
+- (IBAction)profileClick:(id)sender;
+- (IBAction)webSiteClick:(id)sender;
+- (IBAction)logoutClick:(id)sender;
+
 @end

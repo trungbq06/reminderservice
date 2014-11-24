@@ -9,6 +9,9 @@
 #import "DashboardViewController.h"
 #import "DashboardTableViewCell.h"
 #import "RenewalViewController.h"
+#import "AFNetworkingSingleton.h"
+#import "SVProgressHUD.h"
+#import "AddReminderViewController.h"
 
 #define kCellIdentifier @"CellIdentifier"
 
@@ -24,6 +27,32 @@
     [_tableView registerNib:[UINib nibWithNibName:@"DashboardTableViewCell" bundle:nil] forCellReuseIdentifier:kCellIdentifier];
     [_tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     _tableView.backgroundColor = [UIColor clearColor];
+    
+    _lessData = [[NSMutableArray alloc] initWithCapacity:0];
+    _largeData = [[NSMutableArray alloc] initWithCapacity:0];
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    
+    [[AFNetworkingSingleton sharedClient] getPath:@"http://topapp.us/renewal/list" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SVProgressHUD dismiss];
+        
+        NSDictionary *result = [responseObject objectForKey:@"result"];
+        
+        [_lessData removeAllObjects];
+        [_lessData addObjectsFromArray:[result objectForKey:@"less"]];
+        
+        [_largeData removeAllObjects];
+        [_largeData addObjectsFromArray:[result objectForKey:@"large"]];
+        
+        [_tableView reloadData];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,9 +99,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0) {
-        return 3;
+        return [_lessData count];
     } else {
-        return 1;
+        return [_largeData count];
     }
 }
 
@@ -90,9 +119,22 @@
 {
     DashboardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     
-    cell.title.text = @"Car Insurance";
-    cell.backgroundColor = [UIColor clearColor];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    NSDictionary *currObject = nil;
+    
+    if ([_lessData count] > 0 || [_largeData count] > 0) {
+        if (indexPath.section == 0) {
+            currObject = [_lessData objectAtIndex:indexPath.row];
+        } else {
+            currObject = [_largeData objectAtIndex:indexPath.row];
+        }
+        
+        cell.title.text = [currObject objectForKey:@"notes"];
+        cell.dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[currObject objectForKey:@"due"] intValue]];
+        cell.peopleWith.text = [NSString stringWithFormat:@"%@", [currObject objectForKey:@"provider"]];
+        
+        cell.backgroundColor = [UIColor clearColor];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     
     return cell;
 }
@@ -108,6 +150,12 @@
     [self.menuContainerViewController toggleLeftSideMenuCompletion:^{
         
     }];
+}
+
+- (IBAction)btnAddClick:(id)sender {
+    AddReminderViewController *reminderController = [[AddReminderViewController alloc] initWithNibName:@"AddReminderViewController" bundle:nil];
+    
+    [self.navigationController pushViewController:reminderController animated:YES];
 }
 
 @end

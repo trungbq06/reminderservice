@@ -59,18 +59,7 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 }
 
 - (void)loggedIn {
-    MenuViewController *menuController = [[MenuViewController alloc] init];
-
-    DashboardViewController *contentController = [[DashboardViewController alloc] init];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];
-    navController.navigationBarHidden = TRUE;
-    
-    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
-                                                    containerWithCenterViewController:navController
-                                                    leftMenuViewController:menuController
-                                                    rightMenuViewController:nil];
-    
-    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:container];
+    [self showDashboard];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,7 +106,49 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 }
 
 - (IBAction)btnSignInClick:(id)sender {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+    NSString *email = _txtEmail.text;
+    NSString *password = _txtPassword.text;
+    [params setObject:email forKey:@"email"];
+    [params setObject:password forKey:@"password"];
+    
+    [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/user/login" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SVProgressHUD dismiss];
+        
+        NSDictionary *result = (NSDictionary*) responseObject;
+        int errorCode = [[result objectForKey:@"error_code"] intValue];
+        NSString *errorMsg = [result objectForKey:@"error_msg"];
+        
+        if (errorCode == kSuccess) {
+            [self showDashboard];
+        } else {
+            [self showAlert:@"Login Error" message:[NSString stringWithFormat:@"%@!", errorMsg]];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
+- (void) showDashboard {
+    MenuViewController *menuController = [[MenuViewController alloc] init];
+    
+    DashboardViewController *contentController = [[DashboardViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];
+    navController.navigationBarHidden = TRUE;
+    
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:navController
+                                                    leftMenuViewController:menuController
+                                                    rightMenuViewController:nil];
+    
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:container];
+}
+
+-(void) showAlert:(NSString*) title message:(NSString*) message {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (IBAction)btnRegisterClick:(id)sender {

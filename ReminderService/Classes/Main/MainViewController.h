@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
+#define kSuccess 200
+
 @interface MainViewController : UIViewController
 
-@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtEmail;
-@property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *txtPassword;
+@property (weak, nonatomic) IBOutlet UITextField *txtEmail;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 
 - (IBAction)btnFacebookClick:(id)sender;
 - (IBAction)btnTwitterClick:(id)sender;

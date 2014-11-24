@@ -85,7 +85,7 @@
                         </mask>
                     </variation>
                     <connections>
-                        <action selector="btnMenuClick:" destination="-1" eventType="touchUpInside" id="Ntq-ID-9aI"/>
+                        <action selector="btnAddClick:" destination="-1" eventType="touchUpInside" id="YWA-CC-cba"/>
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCW-3G-HRK">
@@ -123,19 +123,19 @@
                     <exclude reference="GCW-3G-HRK"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="k75-G0-Lej"/>
+                    <exclude reference="zFi-eF-MwF"/>
                     <exclude reference="9G9-YV-iWv"/>
                     <exclude reference="yJZ-2R-WOh"/>
+                    <exclude reference="5Kw-rh-tHq"/>
+                    <exclude reference="hFy-35-qfv"/>
                     <exclude reference="G57-KH-RSs"/>
                     <exclude reference="eL3-CC-alJ"/>
                     <exclude reference="rtE-7H-QNC"/>
                     <exclude reference="tNz-2n-SQb"/>
                     <exclude reference="xRV-cb-LBP"/>
-                    <exclude reference="5Kw-rh-tHq"/>
-                    <exclude reference="hFy-35-qfv"/>
                     <exclude reference="py7-Wg-SAd"/>
                     <exclude reference="ziO-Mc-cua"/>
-                    <exclude reference="k75-G0-Lej"/>
-                    <exclude reference="zFi-eF-MwF"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -147,22 +147,22 @@
                     <include reference="GCW-3G-HRK"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="k75-G0-Lej"/>
+                    <include reference="zFi-eF-MwF"/>
                     <include reference="9G9-YV-iWv"/>
                     <include reference="yJZ-2R-WOh"/>
+                    <include reference="5Kw-rh-tHq"/>
+                    <include reference="hFy-35-qfv"/>
                     <include reference="G57-KH-RSs"/>
                     <include reference="eL3-CC-alJ"/>
                     <include reference="rtE-7H-QNC"/>
                     <include reference="tNz-2n-SQb"/>
                     <include reference="xRV-cb-LBP"/>
-                    <include reference="5Kw-rh-tHq"/>
-                    <include reference="hFy-35-qfv"/>
                     <include reference="py7-Wg-SAd"/>
                     <include reference="ziO-Mc-cua"/>
-                    <include reference="k75-G0-Lej"/>
-                    <include reference="zFi-eF-MwF"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="232" y="306"/>
+            <point key="canvasLocation" x="130" y="280"/>
         </view>
     </objects>
     <resources>

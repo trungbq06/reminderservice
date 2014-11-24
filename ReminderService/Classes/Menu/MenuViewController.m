@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "MainViewController.h"
 
 @interface MenuViewController ()
 
@@ -34,4 +35,17 @@
 }
 */
 
+- (IBAction)profileClick:(id)sender {
+    
+}
+
+- (IBAction)webSiteClick:(id)sender {
+    
+}
+
+- (IBAction)logoutClick:(id)sender {
+    MainViewController *mainController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:mainController];
+}
 @end
