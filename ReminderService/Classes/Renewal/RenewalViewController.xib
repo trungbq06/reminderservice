@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -9,6 +9,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RenewalViewController">
             <connections>
+                <outlet property="dueDay" destination="W0a-ft-0NH" id="EaU-yT-PeC"/>
+                <outlet property="lbTitle" destination="5ew-XI-udF" id="3Dg-G7-OXs"/>
+                <outlet property="notes" destination="xrF-T9-Deq" id="pBZ-cu-xne"/>
+                <outlet property="price" destination="Abm-VC-P1x" id="Ejt-Xi-m18"/>
+                <outlet property="provider" destination="owx-5p-cm3" id="eEX-Ss-3ki"/>
+                <outlet property="provider2" destination="Yk1-Sg-65U" id="x2x-j3-hGm"/>
+                <outlet property="renewalDate" destination="KyU-na-aeg" id="kvW-Qx-y4M"/>
+                <outlet property="startDate" destination="JDN-GB-u33" id="S6Y-Hr-0Gp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -125,7 +133,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="184" y="34" width="48" height="21"/>
+                                <rect key="frame" x="184" y="35" width="48" height="21"/>
                             </variation>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 DAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0a-ft-0NH">
@@ -134,7 +142,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                             <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                <rect key="frame" x="69" y="35" width="44" height="21"/>
+                                <rect key="frame" x="68" y="34" width="44" height="21"/>
                             </variation>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rii-RX-8BQ">
@@ -144,7 +152,7 @@
                             </variation>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.25490197539999998" green="0.91764712329999998" blue="0.49019610879999997" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.16882011159999999" green="0.95300662879999998" blue="0.70175891130000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="FYj-ID-uyl"/>
                     </constraints>
@@ -549,31 +557,68 @@
                                 </mask>
                             </variation>
                         </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrF-T9-Deq">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="134" id="CPG-fy-BSB"/>
+                                <constraint firstAttribute="width" constant="265" id="oEb-ZI-iS0"/>
+                            </constraints>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="CPG-fy-BSB"/>
+                                    <exclude reference="oEb-ZI-iS0"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="CPG-fy-BSB"/>
+                                    <include reference="oEb-ZI-iS0"/>
+                                </mask>
+                            </variation>
+                        </textView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Th9-lL-hpE" firstAttribute="top" secondItem="GbV-u2-0qo" secondAttribute="top" constant="8" id="B5v-aa-nw8"/>
                         <constraint firstAttribute="height" constant="150" id="CPv-Id-hp0"/>
+                        <constraint firstItem="xrF-T9-Deq" firstAttribute="leading" secondItem="Th9-lL-hpE" secondAttribute="leading" constant="103" id="YPH-hm-Kmy"/>
+                        <constraint firstItem="xrF-T9-Deq" firstAttribute="top" secondItem="GbV-u2-0qo" secondAttribute="top" constant="8" id="ZHh-ng-jTS">
+                            <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                        </constraint>
+                        <constraint firstAttribute="trailing" secondItem="xrF-T9-Deq" secondAttribute="trailing" constant="8" id="kRs-Jn-Dnv"/>
                         <constraint firstItem="Th9-lL-hpE" firstAttribute="leading" secondItem="GbV-u2-0qo" secondAttribute="leading" constant="8" id="o1S-BF-iyK"/>
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
                             <exclude reference="Th9-lL-hpE"/>
+                            <exclude reference="xrF-T9-Deq"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="CPv-Id-hp0"/>
                             <exclude reference="B5v-aa-nw8"/>
                             <exclude reference="o1S-BF-iyK"/>
+                            <exclude reference="YPH-hm-Kmy"/>
+                            <exclude reference="ZHh-ng-jTS"/>
+                            <exclude reference="kRs-Jn-Dnv"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
                             <include reference="Th9-lL-hpE"/>
+                            <include reference="xrF-T9-Deq"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="CPv-Id-hp0"/>
                             <include reference="B5v-aa-nw8"/>
                             <include reference="o1S-BF-iyK"/>
+                            <include reference="YPH-hm-Kmy"/>
+                            <include reference="ZHh-ng-jTS"/>
+                            <include reference="kRs-Jn-Dnv"/>
                         </mask>
                     </variation>
                 </view>
@@ -748,7 +793,7 @@
                     <include reference="zJu-cY-BUB"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="600" y="729"/>
+            <point key="canvasLocation" x="624" y="479"/>
         </view>
     </objects>
     <resources>

@@ -17,7 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [_dueDay setText:[NSString stringWithFormat:@"%@ days", [_renewal objectForKey:@"due"]]];
+    [_lbTitle setText:[_renewal objectForKey:@"type"]];
+    [_startDate setText:[_renewal objectForKey:@"start_date"]];
+    [_renewalDate setText:[_renewal objectForKey:@"renewal_date"]];
+    [_provider setText:[_renewal objectForKey:@"provider"]];
+    [_provider2 setText:[_renewal objectForKey:@"provider"]];
+    [_price setText:[_renewal objectForKey:@"price"]];
+    [_notes setText:[_renewal objectForKey:@"notes"]];
 }
 
 - (void)didReceiveMemoryWarning {

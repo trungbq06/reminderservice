@@ -51,13 +51,20 @@
         
         [_tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [SVProgressHUD dismiss];
         
+        [self showAlert:@"Error" message:[error localizedDescription]];
     }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) showAlert: (NSString*) title message:(NSString*) message {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 # pragma mark - TABLE VIEW DATA SOURCE
@@ -128,7 +135,7 @@
             currObject = [_largeData objectAtIndex:indexPath.row];
         }
         
-        cell.title.text = [currObject objectForKey:@"notes"];
+        cell.title.text = [currObject objectForKey:@"type"];
         cell.dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[currObject objectForKey:@"due"] intValue]];
         cell.peopleWith.text = [NSString stringWithFormat:@"%@", [currObject objectForKey:@"provider"]];
         
@@ -142,6 +149,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RenewalViewController *renewal = [[RenewalViewController alloc] initWithNibName:@"RenewalViewController" bundle:nil];
+    
+    NSDictionary *currObject = nil;
+    if (indexPath.section == 0) {
+        currObject = [_lessData objectAtIndex:indexPath.row];
+    } else {
+        currObject = [_largeData objectAtIndex:indexPath.row];
+    }
+    
+    [renewal setRenewal:currObject];
     
     [self.navigationController pushViewController:renewal animated:YES];
 }

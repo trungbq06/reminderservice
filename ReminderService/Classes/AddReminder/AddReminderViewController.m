@@ -14,8 +14,6 @@
 
 @end
 
-#define kSuccess 200
-
 @implementation AddReminderViewController
 
 - (void)viewDidLoad {
@@ -54,6 +52,31 @@
     NSString *price = _txtPrice.text;
     NSString *notes = _txtNotes.text;
     
+    if ([type isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Type"];
+        return;
+    }
+    if ([startDate isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Start Date"];
+        return;
+    }
+    if ([renewalDate isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Renewal Date"];
+        return;
+    }
+    if ([provider isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Provider"];
+        return;
+    }
+    if ([price isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Price"];
+        return;
+    }
+    if ([notes isEqualToString:@""]) {
+        [self showAlert:@"Error" message:@"Please enter Notes"];
+        return;
+    }
+    
     [params setObject:type forKey:@"type"];
     [params setObject:startDate forKey:@"start_date"];
     [params setObject:renewalDate forKey:@"renewal_date"];
@@ -69,14 +92,16 @@
         NSString *errorMsg = [result objectForKey:@"error_msg"];
         
         if (errorCode == kSuccess) {
-            [self showAlert:@"Add Renewal" message:@"Added successfully. You can login now !"];
+            [self showAlert:@"Add Renewal" message:@"Added successfully !"];
             
             [self.navigationController popViewControllerAnimated:TRUE];
         } else {
             [self showAlert:@"Add Renewal" message:[NSString stringWithFormat:@"Add error. %@!", errorMsg]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [SVProgressHUD dismiss];
         
+        [self showAlert:@"Add Renewal" message:[error localizedDescription]];
     }];
 }
 

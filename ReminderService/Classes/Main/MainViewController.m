@@ -106,11 +106,24 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 }
 
 - (IBAction)btnSignInClick:(id)sender {
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    [self.view endEditing:YES];
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
     NSString *email = _txtEmail.text;
     NSString *password = _txtPassword.text;
+    
+    if ([email isEqualToString:@""]) {
+        [self showAlert:@"Login Error" message:@"Please enter email !"];
+        return;
+    }
+    
+    if ([password isEqualToString:@""]) {
+        [self showAlert:@"Login Error" message:@"Please enter password !"];
+        return;
+    }
+    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    
     [params setObject:email forKey:@"email"];
     [params setObject:password forKey:@"password"];
     
@@ -127,7 +140,9 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
             [self showAlert:@"Login Error" message:[NSString stringWithFormat:@"%@!", errorMsg]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [SVProgressHUD dismiss];
         
+        [self showAlert:@"Login Error" message:[error localizedDescription]];
     }];
 }
 

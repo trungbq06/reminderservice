@@ -97,6 +97,8 @@
 		37EC9E121A1E108600812CD3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */; };
 		37EC9E131A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
 		37EC9E141A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
+		37FB1FF91A234A66005E36A5 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FB1FF81A234A66005E36A5 /* car.png */; };
+		37FB1FFA1A234A66005E36A5 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FB1FF81A234A66005E36A5 /* car.png */; };
 		6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9771A1FF42B004B68E8 /* DashboardViewController.m */; };
 		6751A97A1A1FF42B004B68E8 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9771A1FF42B004B68E8 /* DashboardViewController.m */; };
 		6751A97B1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */; };
@@ -211,6 +213,8 @@
 		37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		37EC9E0F1A1E108600812CD3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		37EC9E101A1E108600812CD3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		37FB1FF71A22CBD3005E36A5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		37FB1FF81A234A66005E36A5 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 		6751A9761A1FF42B004B68E8 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		6751A9771A1FF42B004B68E8 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		6751A9781A1FF42B004B68E8 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
@@ -263,8 +267,8 @@
 		378FCF551A1B79E000E12BBE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				37FB1FF61A22CBB8005E36A5 /* Common */,
 				6751A97D1A1FF5D1004B68E8 /* MFSideMenu */,
-				37EC9E151A1E10A800812CD3 /* Common */,
 				37EC9E0D1A1E108600812CD3 /* SVProgressHUD */,
 				37EC9DDF1A1E0C6500812CD3 /* AFNetworking */,
 				378FCF5E1A1B7CDA00E12BBE /* FHSTwitterEngine */,
@@ -352,6 +356,7 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37FB1FF81A234A66005E36A5 /* car.png */,
 				6751A9941A1FF9C4004B68E8 /* menu.png */,
 				37EC9DDC1A1E0A5D00812CD3 /* btn_back.png */,
 				37EC9DD01A1E084B00812CD3 /* mobile.png */,
@@ -459,9 +464,10 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		37EC9E151A1E10A800812CD3 /* Common */ = {
+		37FB1FF61A22CBB8005E36A5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				37FB1FF71A22CBD3005E36A5 /* Constant.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -627,6 +633,7 @@
 				37EC9DDD1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DBF1A1DFA1C00812CD3 /* app_bg.png in Resources */,
 				6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */,
+				37FB1FF91A234A66005E36A5 /* car.png in Resources */,
 				37E3F2B71A19B27B00BF609B /* Main.storyboard in Resources */,
 				37E3F2BC1A19B27B00BF609B /* LaunchScreen.xib in Resources */,
 				37E3F2B91A19B27B00BF609B /* Images.xcassets in Resources */,
@@ -669,6 +676,7 @@
 				37E3F2DE1A1A0D0B00BF609B /* login_bg@2x.png in Resources */,
 				37E3F2E01A1A0D0B00BF609B /* login_bg@3x.png in Resources */,
 				37EC9DC71A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
+				37FB1FFA1A234A66005E36A5 /* car.png in Resources */,
 				37EC9DDE1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DC01A1DFA1C00812CD3 /* app_bg.png in Resources */,
 				6751A9921A1FF611004B68E8 /* MenuViewController.xib in Resources */,
@@ -866,7 +874,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ReminderService/Reminder.pch;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Reminder.pch";
 				INFOPLIST_FILE = ReminderService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -883,7 +891,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = ReminderService/Reminder.pch;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Reminder.pch";
 				INFOPLIST_FILE = ReminderService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -900,6 +908,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Reminder.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -920,6 +930,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_NAME)/Reminder.pch";
 				INFOPLIST_FILE = ReminderServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

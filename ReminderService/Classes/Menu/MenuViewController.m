@@ -44,8 +44,12 @@
 }
 
 - (IBAction)logoutClick:(id)sender {
-    MainViewController *mainController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    MainViewController *mainController = (MainViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:mainController];
+    navController.navigationBarHidden = YES;
     
-    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:mainController];
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:navController];
 }
 @end
