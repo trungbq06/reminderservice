@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddReminderViewController : UIViewController
+@interface AddReminderViewController : UIViewController < UITextFieldDelegate >
 
 @property (weak, nonatomic) IBOutlet UITextField *txtType;
 @property (weak, nonatomic) IBOutlet UITextField *txtStartDate;

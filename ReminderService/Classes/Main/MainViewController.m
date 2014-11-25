@@ -113,12 +113,12 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
     NSString *password = _txtPassword.text;
     
     if ([email isEqualToString:@""]) {
-        [self showAlert:@"Login Error" message:@"Please enter email !"];
+        [self showAlert:@"Login Error" message:@"Please enter your email address"];
         return;
     }
     
     if ([password isEqualToString:@""]) {
-        [self showAlert:@"Login Error" message:@"Please enter password !"];
+        [self showAlert:@"Login Error" message:@"Please enter password"];
         return;
     }
     

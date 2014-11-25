@@ -55,7 +55,7 @@
         return FALSE;
     }
     if (![self isValidEmail:cEmail]) {
-        [self showAlertError:@"Wrong confirm email address"];
+        [self showAlertError:@"Email address confirmation incorrect"];
         return FALSE;
     }
     if (![email isEqualToString:cEmail]) {

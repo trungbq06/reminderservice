@@ -7,6 +7,7 @@
 //
 
 #import "AddReminderViewController.h"
+#import "DatePickerPopoverController.h"
 #import "AFNetworkingSingleton.h"
 #import "SVProgressHUD.h"
 
@@ -112,6 +113,18 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+}
+
+#pragma mark - TEXTFIELD DELEGATE
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    if (textField == _txtStartDate) {
+        DatePickerPopoverController *dateController = [[DatePickerPopoverController alloc] initWithTitle:@"Start Date" selectedDate:@"" contentFrame:CGRectMake(0, 0, 300, 300) delegate:self output:textField direction:UIPopoverArrowDirectionDown];
+        
+        [dateController showPopoverPickerInView:self.view];
+    }
+    
+    return NO;
 }
 
 @end

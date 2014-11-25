@@ -16,6 +16,8 @@
 		378FCF651A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */; };
 		378FCF661A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */; };
 		378FCF841A1B816000E12BBE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF831A1B816000E12BBE /* Twitter.framework */; };
+		37C478B01A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
+		37C478B11A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
 		37E3F2AB1A19B27B00BF609B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3F2AA1A19B27B00BF609B /* main.m */; };
 		37E3F2AE1A19B27B00BF609B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3F2AD1A19B27B00BF609B /* AppDelegate.m */; };
 		37E3F2B11A19B27B00BF609B /* ReminderService.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37E3F2AF1A19B27B00BF609B /* ReminderService.xcdatamodeld */; };
@@ -148,6 +150,8 @@
 		378FCF611A1B7CDA00E12BBE /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
 		378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		378FCF831A1B816000E12BBE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		37C478AE1A24524600D1491C /* DatePickerPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerPopoverController.h; sourceTree = "<group>"; };
+		37C478AF1A24524600D1491C /* DatePickerPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerPopoverController.m; sourceTree = "<group>"; };
 		37E3F2A51A19B27B00BF609B /* ReminderService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3F2A91A19B27B00BF609B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E3F2AA1A19B27B00BF609B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 		378FCF551A1B79E000E12BBE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				37C478AD1A24521200D1491C /* DatePicker */,
 				37FB1FF61A22CBB8005E36A5 /* Common */,
 				6751A97D1A1FF5D1004B68E8 /* MFSideMenu */,
 				37EC9E0D1A1E108600812CD3 /* SVProgressHUD */,
@@ -285,6 +290,15 @@
 				378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */,
 			);
 			path = FHSTwitterEngine;
+			sourceTree = "<group>";
+		};
+		37C478AD1A24521200D1491C /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				37C478AE1A24524600D1491C /* DatePickerPopoverController.h */,
+				37C478AF1A24524600D1491C /* DatePickerPopoverController.m */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 		37E3F29C1A19B27B00BF609B = {
@@ -703,6 +717,7 @@
 				37EC9DF91A1E0C6500812CD3 /* AFJSONRequestOperation.m in Sources */,
 				37EC9DF51A1E0C6500812CD3 /* AFHTTPRequestOperation.m in Sources */,
 				6751A9871A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */,
+				37C478B01A24524600D1491C /* DatePickerPopoverController.m in Sources */,
 				6751A9A21A200543004B68E8 /* RenewalViewController.m in Sources */,
 				37EC9E011A1E0C6500812CD3 /* AFXMLRequestOperation.m in Sources */,
 				37EC9DFF1A1E0C6500812CD3 /* AFURLConnectionOperation.m in Sources */,
@@ -740,6 +755,7 @@
 				37EC9E0A1A1E0C8900812CD3 /* AFNetworkingSingleton.m in Sources */,
 				6751A99C1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */,
 				37EC9E141A1E108600812CD3 /* SVProgressHUD.m in Sources */,
+				37C478B11A24524600D1491C /* DatePickerPopoverController.m in Sources */,
 				37EC9DFE1A1E0C6500812CD3 /* AFPropertyListRequestOperation.m in Sources */,
 				37E3F2D71A1A0C7F00BF609B /* MainViewController.m in Sources */,
 				6751A9861A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */,
