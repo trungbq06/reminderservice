@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtPrice;
 @property (weak, nonatomic) IBOutlet UITextView *txtNotes;
 
+@property (nonatomic, retain) UIView            *dateView;
+@property (nonatomic, retain) UIDatePicker      *datePicker;
+@property (nonatomic, retain) UITextField       *currTextField;
+
 - (IBAction)btnAddClick:(id)sender;
 - (IBAction)btnCancelClick:(id)sender;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370D49711A24DA46002012C0 /* tick_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 370D49701A24DA46002012C0 /* tick_select.png */; };
+		370D49721A24DA46002012C0 /* tick_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 370D49701A24DA46002012C0 /* tick_select.png */; };
 		378FCF531A1B753000E12BBE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF521A1B753000E12BBE /* FacebookSDK.framework */; };
 		378FCF541A1B753000E12BBE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF521A1B753000E12BBE /* FacebookSDK.framework */; };
 		378FCF5B1A1B7A1500E12BBE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF5A1A1B7A1500E12BBE /* Accounts.framework */; };
@@ -142,6 +144,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370D49701A24DA46002012C0 /* tick_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick_select.png; sourceTree = "<group>"; };
 		378FCF521A1B753000E12BBE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		378FCF5A1A1B7A1500E12BBE /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		378FCF5C1A1B7A1D00E12BBE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -370,6 +373,7 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				370D49701A24DA46002012C0 /* tick_select.png */,
 				37FB1FF81A234A66005E36A5 /* car.png */,
 				6751A9941A1FF9C4004B68E8 /* menu.png */,
 				37EC9DDC1A1E0A5D00812CD3 /* btn_back.png */,
@@ -635,6 +639,7 @@
 				37E3F2E61A1A1FED00BF609B /* facebook_btn.png in Resources */,
 				37EC9DD81A1E084B00812CD3 /* register_bg.png in Resources */,
 				37E3F2EC1A1A1FED00BF609B /* register_btn.png in Resources */,
+				370D49711A24DA46002012C0 /* tick_select.png in Resources */,
 				6751A9951A1FF9C4004B68E8 /* menu.png in Resources */,
 				37E3F2DD1A1A0D0B00BF609B /* login_bg@2x.png in Resources */,
 				37E3F2E81A1A1FED00BF609B /* form_bg.png in Resources */,
@@ -686,6 +691,7 @@
 				37E3F2E91A1A1FED00BF609B /* form_bg.png in Resources */,
 				37EC9DD91A1E084B00812CD3 /* register_bg.png in Resources */,
 				37EC9DBB1A1DF9BE00812CD3 /* logo_bg.png in Resources */,
+				370D49721A24DA46002012C0 /* tick_select.png in Resources */,
 				37EC9DD51A1E084B00812CD3 /* mobile.png in Resources */,
 				37E3F2DE1A1A0D0B00BF609B /* login_bg@2x.png in Resources */,
 				37E3F2E01A1A0D0B00BF609B /* login_bg@3x.png in Resources */,

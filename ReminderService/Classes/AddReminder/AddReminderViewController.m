@@ -19,7 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    
+//    _txtStartDate.leftView = paddingView;
+//    _txtStartDate.leftViewMode = UITextFieldViewModeAlways;
+//    
+//    _txtPrice.leftView = paddingView;
+//    _txtPrice.leftViewMode = UITextFieldViewModeAlways;
+//    
+//    _txtProvider.leftView = paddingView;
+//    _txtProvider.leftViewMode = UITextFieldViewModeAlways;
+//    
+//    _txtRenewalDate.leftView = paddingView;
+//    _txtRenewalDate.leftViewMode = UITextFieldViewModeAlways;
+//    
+//    _txtType.leftView = paddingView;
+//    _txtType.leftViewMode = UITextFieldViewModeAlways;
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +61,8 @@
 -(void) showAlert: (NSString*) title message:(NSString*) message {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
+    
+    [SVProgressHUD dismiss];
 }
 
 - (IBAction)btnAddClick:(id)sender {
@@ -113,18 +136,60 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
+    
+    [_dateView removeFromSuperview];
+}
+
+- (void) initDatePicker {
+    CGRect frame = self.view.frame;
+    _dateView = [[UIView alloc] initWithFrame:CGRectMake(0, frame.size.height - 216, frame.size.width, 216)];
+    _dateView.backgroundColor = [UIColor whiteColor];
+    
+    _datePicker=[[UIDatePicker alloc]init];
+    _datePicker.frame=CGRectMake(0,0,320, 216);
+    _datePicker.datePickerMode = UIDatePickerModeDate;
+    [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    NSDate *currDate = [NSDate date];
+    
+    NSString *txtDate = _currTextField.text;
+    if ([txtDate isEqualToString:@""]) {
+        _datePicker.date = currDate;
+    } else {
+        _datePicker.date = [formatter dateFromString:txtDate];
+    }
+    
+    [_dateView addSubview:_datePicker];
+    
+    [self.view addSubview:_dateView];
+}
+
+- (void) dateChanged:(id) sender {
+    NSDate * dateSelected = ((UIDatePicker *) sender).date;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSString *strDate = [formatter stringFromDate:dateSelected];
+    _currTextField.text = strDate;
 }
 
 #pragma mark - TEXTFIELD DELEGATE
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
-    if (textField == _txtStartDate) {
-        DatePickerPopoverController *dateController = [[DatePickerPopoverController alloc] initWithTitle:@"Start Date" selectedDate:@"" contentFrame:CGRectMake(0, 0, 300, 300) delegate:self output:textField direction:UIPopoverArrowDirectionDown];
+    if (textField == _txtStartDate || textField == _txtRenewalDate) {
+        [self.view endEditing:YES];
+        [_dateView removeFromSuperview];
         
-        [dateController showPopoverPickerInView:self.view];
+        _currTextField = textField;
+        [self initDatePicker];
+        
+        return NO;
     }
     
-    return NO;
+    return TRUE;
 }
 
 @end

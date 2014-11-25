@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="btnAgree" destination="kvw-by-oMl" id="rSB-0u-0cs"/>
                 <outlet property="txtConfirmEmail" destination="3rX-LW-mgr" id="kaB-GX-p09"/>
                 <outlet property="txtEmail" destination="Fur-3W-HKM" id="EWt-Vc-gSd"/>
                 <outlet property="txtFirstname" destination="mTl-0W-0i6" id="KTj-9g-YW3"/>
@@ -93,21 +94,16 @@
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-by-oMl">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-by-oMl">
                             <rect key="frame" x="33" y="370" width="30" height="30"/>
                             <state key="normal" backgroundImage="tick.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" image="tick_select.png" backgroundImage="tick_select.png"/>
                             <connections>
                                 <action selector="btnAgreeClick:" destination="-1" eventType="touchUpInside" id="kvF-ce-1ab"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to terms &amp; conditions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-sF-nhD">
-                            <rect key="frame" x="71" y="374" width="214" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-5M-isT">
                             <rect key="frame" x="16" y="415" width="244" height="38"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -127,6 +123,22 @@
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Agree to" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdk-sF-nhD">
+                            <rect key="frame" x="71" y="374" width="57" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNh-8B-Xy2">
+                            <rect key="frame" x="118" y="370" width="129" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="terms &amp; conditions">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="termClick:" destination="-1" eventType="touchUpInside" id="et8-kZ-CjX"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -174,7 +186,7 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="903.5" y="414.5"/>
+            <point key="canvasLocation" x="1358.5" y="310.5"/>
         </view>
     </objects>
     <resources>
@@ -188,5 +200,6 @@
         <image name="pencil.png" width="51" height="50"/>
         <image name="register_bg.png" width="794" height="1413"/>
         <image name="tick.png" width="75" height="75"/>
+        <image name="tick_select.png" width="75" height="75"/>
     </resources>
 </document>

@@ -66,8 +66,26 @@
         [self showAlertError:@"Please enter valid mobile number"];
         return FALSE;
     }
+    if (![self mobileAllow:mobile]) {
+        [self showAlertError:@"Mobile number must start with 01,02,07,08"];
+        return FALSE;
+    }
     if ([password isEqualToString:@""]) {
         [self showAlertError:@"Please enter password"];
+        return FALSE;
+    }
+    if (!_btnAgree.selected) {
+        [self showAlertError:@"You must agree with term & conditions"];
+        return FALSE;
+    }
+    
+    return TRUE;
+}
+
+-(BOOL) mobileAllow:(NSString *) checkString {
+    NSString *two = [checkString substringWithRange:NSMakeRange(0, 2)];
+    
+    if (![two isEqualToString:@"01"] && ![two isEqualToString:@"02"] && ![two isEqualToString:@"07"] && ![two isEqualToString:@"08"]) {
         return FALSE;
     }
     
@@ -149,7 +167,12 @@
 }
 
 - (IBAction)btnAgreeClick:(id)sender {
-    
+    _btnAgree.selected = !_btnAgree.selected;
+}
+
+- (IBAction)termClick:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opening" message:@"Add link to open me" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

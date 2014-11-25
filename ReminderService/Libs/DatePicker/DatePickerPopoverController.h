@@ -33,6 +33,6 @@
               output:(UITextField*)output
            direction:(UIPopoverArrowDirection) direction;
 
-- (void) showPopoverPickerInView:(UIView*)_view;
+- (void) showPopoverPickerInView:(UIView*)_pView;
 
 @end

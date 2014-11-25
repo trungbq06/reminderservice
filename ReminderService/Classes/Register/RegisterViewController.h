@@ -17,9 +17,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtConfirmEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtMobile;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+@property (weak, nonatomic) IBOutlet UIButton *btnAgree;
 
 - (IBAction)btnLoginClick:(id)sender;
 - (IBAction)btnRegisterClick:(id)sender;
 - (IBAction)btnAgreeClick:(id)sender;
+- (IBAction)termClick:(id)sender;
 
 @end
