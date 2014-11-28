@@ -59,15 +59,17 @@
         return FALSE;
     }
     if (![email isEqualToString:cEmail]) {
-        [self showAlertError:@"Confirm email is wrong"];
+        [self showAlertError:@"It looks like your email address don’t message"];
         return FALSE;
     }
+    /*
     if (![self isValidMobile:mobile]) {
         [self showAlertError:@"Please enter valid mobile number"];
         return FALSE;
     }
-    if (![self mobileAllow:mobile]) {
-        [self showAlertError:@"Mobile number must start with 01,02,07,08"];
+    */
+    if (![mobile isEqualToString:@""] && ![self mobileAllow:mobile]) {
+        [self showAlertError:@"Your contact number must start 01, 02, 07 or 08"];
         return FALSE;
     }
     if ([password isEqualToString:@""]) {
@@ -75,7 +77,7 @@
         return FALSE;
     }
     if (!_btnAgree.selected) {
-        [self showAlertError:@"You must agree with term & conditions"];
+        [self showAlertError:@"Please agree to terms and conditions"];
         return FALSE;
     }
     
@@ -154,11 +156,11 @@
             NSString *errorMsg = [result objectForKey:@"error_msg"];
             
             if (errorCode == kSuccess) {
-                [self showAlert:@"Register" message:@"Register successfully. You can login now !"];
+                [self showAlert:@"Registration" message:@"You’ve been successfully registered, please now login"];
                 
                 [self.navigationController popViewControllerAnimated:TRUE];
             } else {
-                [self showAlert:@"Register" message:[NSString stringWithFormat:@"Register error. %@!", errorMsg]];
+                [self showAlert:@"Register" message:[NSString stringWithFormat:@"Register error. Your details are already registered!"]];
             }
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             

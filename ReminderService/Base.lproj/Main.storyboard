@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UuF-3b-F0g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UuF-3b-F0g">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -20,11 +20,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-rC-vOM">
                                 <rect key="frame" x="-353" y="0.0" width="1081" height="1920"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agY-7U-Jpi">
-                                <rect key="frame" x="43" y="147" width="288" height="284"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agY-7U-Jpi">
+                                <rect key="frame" x="43" y="147" width="288" height="311"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="form_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="LHO-So-AeH">
-                                        <rect key="frame" x="8" y="0.0" width="272" height="275"/>
+                                        <rect key="frame" x="8" y="0.0" width="272" height="311"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qd4-fr-WFo">
                                         <rect key="frame" x="87" y="84" width="176" height="40"/>
@@ -38,7 +38,7 @@
                                         <rect key="frame" x="29" y="88" width="25" height="32"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGj-Be-dbj">
-                                        <rect key="frame" x="22" y="135" width="244" height="38"/>
+                                        <rect key="frame" x="22" y="167" width="244" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Sign In" backgroundImage="login_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-4U-xst">
-                                        <rect key="frame" x="22" y="183" width="244" height="38"/>
+                                        <rect key="frame" x="22" y="215" width="244" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Register (it's free)" backgroundImage="register_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +60,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpj-4l-rZT">
-                                        <rect key="frame" x="22" y="229" width="97" height="38"/>
+                                        <rect key="frame" x="22" y="261" width="97" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="    Sign In" backgroundImage="facebook_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -71,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upd-mP-95y">
-                                        <rect key="frame" x="169" y="229" width="97" height="38"/>
+                                        <rect key="frame" x="169" y="261" width="97" height="38"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="    Sign In" backgroundImage="twitter_btn.png">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,6 +86,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVc-2a-tzF">
+                                        <rect key="frame" x="66" y="134" width="20" height="20"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" backgroundImage="tick.png">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" backgroundImage="tick_select.png"/>
+                                        <state key="highlighted" backgroundImage="tick_select.png"/>
+                                        <connections>
+                                            <action selector="keepMeSignInClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GE7-9x-vXU"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Keep me signed in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LA2-bB-DGe">
+                                        <rect key="frame" x="99" y="133" width="135" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -114,13 +133,14 @@
                     <navigationItem key="navigationItem" id="Cee-1g-5KD"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="btnKeep" destination="vVc-2a-tzF" id="14Z-CW-Cv1"/>
                         <outlet property="txtEmail" destination="bdr-m0-Cpv" id="M9C-EG-p1m"/>
                         <outlet property="txtPassword" destination="Qd4-fr-WFo" id="dey-vm-yJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-501.5" y="-142.5"/>
+            <point key="canvasLocation" x="-517.5" y="-163.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lEi-Ir-AJ7">
@@ -149,6 +169,8 @@
         <image name="logo_bg.png" width="669" height="165"/>
         <image name="password_icon.png" width="49" height="65"/>
         <image name="register_btn.png" width="671" height="103"/>
+        <image name="tick.png" width="75" height="75"/>
+        <image name="tick_select.png" width="75" height="75"/>
         <image name="twitter_btn.png" width="304" height="103"/>
     </resources>
 </document>

@@ -16,10 +16,14 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtEmail;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 
+@property (nonatomic, assign) BOOL               keepMeSignIn;
+@property (weak, nonatomic) IBOutlet UIButton *btnKeep;
+
 - (IBAction)btnFacebookClick:(id)sender;
 - (IBAction)btnTwitterClick:(id)sender;
 - (IBAction)btnSignInClick:(id)sender;
 - (IBAction)btnRegisterClick:(id)sender;
+- (IBAction)keepMeSignInClick:(id)sender;
 
 @end
 

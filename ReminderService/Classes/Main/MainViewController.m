@@ -22,6 +22,9 @@
 static NSString * const kTwitterAPIKey = @"KOW7ZDftiz1nn1DpMOEsELnkb";
 static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtfAS0fckohAGJKkB3M";
 
+#define kUserEmail @"user_email"
+#define kUserPassword @"user_password"
+
 @interface MainViewController () <FHSTwitterEngineAccessTokenDelegate>
 
 @end
@@ -46,9 +49,6 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
                                                              NSError *error) {
                 // we recurse here, in order to update buttons and labels
                 [self loggedIn];
-//                PasswordViewController *forgetController = [[PasswordViewController alloc] initWithNibName:@"PasswordViewController" bundle:nil];
-//                
-//                [self.navigationController pushViewController:forgetController animated:YES];
             }];
         }
     }
@@ -56,6 +56,20 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
     [[FHSTwitterEngine sharedEngine]permanentlySetConsumerKey:kTwitterAPIKey andSecret:kTwitterSecretKey];
     [[FHSTwitterEngine sharedEngine]setDelegate:self];
     [[FHSTwitterEngine sharedEngine]loadAccessToken];
+    
+    BOOL isKeep = [[NSUserDefaults standardUserDefaults] boolForKey:@"keep"];
+    if (isKeep) {
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+        NSString *email = [[NSUserDefaults standardUserDefaults] objectForKey:kUserEmail];
+        NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:kUserPassword];
+        
+        if (email && password) {
+            [params setObject:email forKey:@"email"];
+            [params setObject:password forKey:@"password"];
+            
+            [self login:params];
+        }
+    }
 }
 
 - (void)loggedIn {
@@ -122,10 +136,15 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         return;
     }
     
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
-    
     [params setObject:email forKey:@"email"];
     [params setObject:password forKey:@"password"];
+    
+    [self login:params];
+}
+
+- (void) login:(NSDictionary*) params
+{
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
     [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/user/login" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [SVProgressHUD dismiss];
@@ -135,14 +154,20 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         NSString *errorMsg = [result objectForKey:@"error_msg"];
         
         if (errorCode == kSuccess) {
+            if (_btnKeep.selected) {
+                // Save session
+                [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"email"] forKey:kUserEmail];
+                [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"password"] forKey:kUserPassword];
+            }
+            
             [self showDashboard];
         } else {
-            [self showAlert:@"Login Error" message:[NSString stringWithFormat:@"%@!", errorMsg]];
+            [self showAlert:@"Error" message:@"Your details appear to be incorrect, please try again"];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [SVProgressHUD dismiss];
         
-        [self showAlert:@"Login Error" message:[error localizedDescription]];
+        [self showAlert:@"Error" message:@"Your details appear to be incorrect, please try again"];
     }];
 }
 
@@ -170,6 +195,12 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
     RegisterViewController *registerController = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
     
     [self.navigationController pushViewController:registerController animated:YES];
+}
+
+- (IBAction)keepMeSignInClick:(id)sender {
+    _btnKeep.selected = !_btnKeep.selected;
+    
+    [[NSUserDefaults standardUserDefaults] setBool:_btnKeep.selected forKey:@"keep"];
 }
 
 #pragma mark - FHSTwitter Engine

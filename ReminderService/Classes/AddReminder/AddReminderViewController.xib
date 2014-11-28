@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
@@ -24,6 +24,9 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="FKr-IZ-sHE">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="-312" y="0.0" width="1024" height="877"/>
+                    </variation>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="ild-vy-MLx">
                     <rect key="frame" x="67" y="75" width="240" height="60"/>
@@ -112,6 +115,9 @@
                             <include reference="zXy-Uw-AbT"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dP5-8K-XVN"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Start Date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W5Q-qX-gZr">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -264,17 +270,16 @@
                     <exclude reference="EA7-0Q-bgw"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="7eb-SY-q9M"/>
-                    <exclude reference="MeR-4A-h9i"/>
-                    <exclude reference="ONh-Y6-9Qu"/>
-                    <exclude reference="zKR-Hk-iBN"/>
-                    <exclude reference="ZGm-De-Te3"/>
-                    <exclude reference="gPC-Up-zkL"/>
+                    <exclude reference="7oF-Zz-qSp"/>
+                    <exclude reference="GLn-fm-2AA"/>
+                    <exclude reference="rb7-Ap-UxZ"/>
                     <exclude reference="gGP-FO-Lp1"/>
                     <exclude reference="kqg-bv-8Jh"/>
                     <exclude reference="uwN-rD-FAb"/>
-                    <exclude reference="V3m-Oq-ekP"/>
-                    <exclude reference="qD0-oC-ZoF"/>
+                    <exclude reference="8ks-aN-h0N"/>
+                    <exclude reference="s8J-Ft-EwV"/>
+                    <exclude reference="ZGm-De-Te3"/>
+                    <exclude reference="gPC-Up-zkL"/>
                     <exclude reference="GQh-ZP-yIv"/>
                     <exclude reference="pn9-Ks-Reu"/>
                     <exclude reference="wsV-2b-7cr"/>
@@ -283,17 +288,18 @@
                     <exclude reference="ixg-NN-gR9"/>
                     <exclude reference="syM-ik-CHq"/>
                     <exclude reference="yHA-SC-ofU"/>
-                    <exclude reference="7oF-Zz-qSp"/>
-                    <exclude reference="GLn-fm-2AA"/>
-                    <exclude reference="rb7-Ap-UxZ"/>
-                    <exclude reference="8ks-aN-h0N"/>
-                    <exclude reference="s8J-Ft-EwV"/>
-                    <exclude reference="7E5-PF-OU7"/>
-                    <exclude reference="cEM-sS-v4l"/>
-                    <exclude reference="Y8x-Fa-rTc"/>
-                    <exclude reference="bsi-nX-98b"/>
                     <exclude reference="BbV-I1-GbK"/>
                     <exclude reference="qtK-Cg-YYf"/>
+                    <exclude reference="7eb-SY-q9M"/>
+                    <exclude reference="MeR-4A-h9i"/>
+                    <exclude reference="ONh-Y6-9Qu"/>
+                    <exclude reference="zKR-Hk-iBN"/>
+                    <exclude reference="Y8x-Fa-rTc"/>
+                    <exclude reference="bsi-nX-98b"/>
+                    <exclude reference="V3m-Oq-ekP"/>
+                    <exclude reference="qD0-oC-ZoF"/>
+                    <exclude reference="7E5-PF-OU7"/>
+                    <exclude reference="cEM-sS-v4l"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -311,17 +317,16 @@
                     <include reference="EA7-0Q-bgw"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="7eb-SY-q9M"/>
-                    <include reference="MeR-4A-h9i"/>
-                    <include reference="ONh-Y6-9Qu"/>
-                    <include reference="zKR-Hk-iBN"/>
-                    <include reference="ZGm-De-Te3"/>
-                    <include reference="gPC-Up-zkL"/>
+                    <include reference="7oF-Zz-qSp"/>
+                    <include reference="GLn-fm-2AA"/>
+                    <include reference="rb7-Ap-UxZ"/>
                     <include reference="gGP-FO-Lp1"/>
                     <include reference="kqg-bv-8Jh"/>
                     <include reference="uwN-rD-FAb"/>
-                    <include reference="V3m-Oq-ekP"/>
-                    <include reference="qD0-oC-ZoF"/>
+                    <include reference="8ks-aN-h0N"/>
+                    <include reference="s8J-Ft-EwV"/>
+                    <include reference="ZGm-De-Te3"/>
+                    <include reference="gPC-Up-zkL"/>
                     <include reference="GQh-ZP-yIv"/>
                     <include reference="pn9-Ks-Reu"/>
                     <include reference="wsV-2b-7cr"/>
@@ -330,20 +335,21 @@
                     <include reference="ixg-NN-gR9"/>
                     <include reference="syM-ik-CHq"/>
                     <include reference="yHA-SC-ofU"/>
-                    <include reference="7oF-Zz-qSp"/>
-                    <include reference="GLn-fm-2AA"/>
-                    <include reference="rb7-Ap-UxZ"/>
-                    <include reference="8ks-aN-h0N"/>
-                    <include reference="s8J-Ft-EwV"/>
-                    <include reference="7E5-PF-OU7"/>
-                    <include reference="cEM-sS-v4l"/>
-                    <include reference="Y8x-Fa-rTc"/>
-                    <include reference="bsi-nX-98b"/>
                     <include reference="BbV-I1-GbK"/>
                     <include reference="qtK-Cg-YYf"/>
+                    <include reference="7eb-SY-q9M"/>
+                    <include reference="MeR-4A-h9i"/>
+                    <include reference="ONh-Y6-9Qu"/>
+                    <include reference="zKR-Hk-iBN"/>
+                    <include reference="Y8x-Fa-rTc"/>
+                    <include reference="bsi-nX-98b"/>
+                    <include reference="V3m-Oq-ekP"/>
+                    <include reference="qD0-oC-ZoF"/>
+                    <include reference="7E5-PF-OU7"/>
+                    <include reference="cEM-sS-v4l"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="505" y="579"/>
+            <point key="canvasLocation" x="641" y="427"/>
         </view>
     </objects>
     <resources>

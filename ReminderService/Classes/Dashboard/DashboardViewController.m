@@ -137,7 +137,11 @@
         
         cell.title.text = [currObject objectForKey:@"type"];
         cell.dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[currObject objectForKey:@"due"] intValue]];
-        cell.peopleWith.text = [NSString stringWithFormat:@"%@", [currObject objectForKey:@"provider"]];
+        NSString *provider = [currObject objectForKey:@"provider"];
+        if ([provider isEqualToString:@""])
+            cell.peopleWith.hidden = YES;
+        else
+            cell.peopleWith.text = [NSString stringWithFormat:@"%@", [currObject objectForKey:@"provider"]];
         
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

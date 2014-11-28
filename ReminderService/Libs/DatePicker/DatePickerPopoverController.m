@@ -28,7 +28,6 @@
             _datePicker.date = [dateFormatter dateFromString:_selectedDate];
         
         _datePicker.datePickerMode = UIDatePickerModeDate;
-//        [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
         [self.view addSubview:_datePicker];
         
         _pickerTitle = _poptitle;
@@ -46,13 +45,6 @@
         [doneButton setTitle:@"Done" forState:UIControlStateNormal];
         [doneButton addTarget:self action:@selector(doneClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:doneButton];
-        
-//        UIViewController *popoverContent = [[UIViewController alloc] init];
-//        popoverContent.view.frame = _contentFrame;
-//        [popoverContent.view addSubview:datePicker];
-        
-//        _datePopoverController = [[UIPopoverController alloc] initWithContentViewController:popoverContent];
-//        [_datePopoverController setPopoverContentSize:_contentFrame.size animated:YES];
     }
     
     return self;
@@ -65,8 +57,6 @@
 
 - (void) showPopoverPickerInView:(UIView *)_pView
 {
-//    [_datePopoverController presentPopoverFromRect: CGRectMake(_contentFrame.origin.x , _contentFrame.origin.y, 0, 0) inView:_pView permittedArrowDirections: _direction animated: NO];
-//    [_pView addSubview:_datePicker];
     [_pView addSubview:self.view];
 }
 

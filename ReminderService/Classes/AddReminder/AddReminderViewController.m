@@ -10,6 +10,7 @@
 #import "DatePickerPopoverController.h"
 #import "AFNetworkingSingleton.h"
 #import "SVProgressHUD.h"
+#import "TypeTableViewController.h"
 
 @interface AddReminderViewController ()
 
@@ -41,6 +42,11 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    NSString *sType = [[NSUserDefaults standardUserDefaults] objectForKey:@"s_type"];
+    
+    if (sType)
+        _txtType.text = sType;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -116,7 +122,7 @@
         NSString *errorMsg = [result objectForKey:@"error_msg"];
         
         if (errorCode == kSuccess) {
-            [self showAlert:@"Add Renewal" message:@"Added successfully !"];
+//            [self showAlert:@"Add Renewal" message:@"Added successfully !"];
             
             [self.navigationController popViewControllerAnimated:TRUE];
         } else {
@@ -151,7 +157,7 @@
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
+    [formatter setDateFormat:@"dd-MM-YYYY"];
     NSDate *currDate = [NSDate date];
     
     NSString *txtDate = _currTextField.text;
@@ -170,7 +176,7 @@
     NSDate * dateSelected = ((UIDatePicker *) sender).date;
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYY-MM-dd"];
+    [formatter setDateFormat:@"dd-MM-YYYY"];
     
     NSString *strDate = [formatter stringFromDate:dateSelected];
     _currTextField.text = strDate;
@@ -185,6 +191,13 @@
         
         _currTextField = textField;
         [self initDatePicker];
+        
+        return NO;
+    } else if (textField == _txtType) {
+        TypeTableViewController *typeController = [[TypeTableViewController alloc] initWithNibName:@"TypeTableViewController" bundle:nil];
+//        typeController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        
+        [self.navigationController pushViewController:typeController animated:YES];
         
         return NO;
     }

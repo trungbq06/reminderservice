@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		370D49711A24DA46002012C0 /* tick_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 370D49701A24DA46002012C0 /* tick_select.png */; };
 		370D49721A24DA46002012C0 /* tick_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 370D49701A24DA46002012C0 /* tick_select.png */; };
+		378C33B01A28A055001CAECF /* TypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C33AF1A28A055001CAECF /* TypeTableViewController.m */; };
+		378C33B11A28A055001CAECF /* TypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378C33AF1A28A055001CAECF /* TypeTableViewController.m */; };
+		378C33B31A28A444001CAECF /* TypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C33B21A28A444001CAECF /* TypeTableViewController.xib */; };
+		378C33B41A28A444001CAECF /* TypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 378C33B21A28A444001CAECF /* TypeTableViewController.xib */; };
 		378FCF531A1B753000E12BBE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF521A1B753000E12BBE /* FacebookSDK.framework */; };
 		378FCF541A1B753000E12BBE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF521A1B753000E12BBE /* FacebookSDK.framework */; };
 		378FCF5B1A1B7A1500E12BBE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF5A1A1B7A1500E12BBE /* Accounts.framework */; };
@@ -145,6 +149,9 @@
 
 /* Begin PBXFileReference section */
 		370D49701A24DA46002012C0 /* tick_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick_select.png; sourceTree = "<group>"; };
+		378C33AE1A28A055001CAECF /* TypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeTableViewController.h; sourceTree = "<group>"; };
+		378C33AF1A28A055001CAECF /* TypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeTableViewController.m; sourceTree = "<group>"; };
+		378C33B21A28A444001CAECF /* TypeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TypeTableViewController.xib; sourceTree = "<group>"; };
 		378FCF521A1B753000E12BBE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		378FCF5A1A1B7A1500E12BBE /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		378FCF5C1A1B7A1D00E12BBE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -271,6 +278,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		378C33AD1A28A03D001CAECF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				378C33AE1A28A055001CAECF /* TypeTableViewController.h */,
+				378C33AF1A28A055001CAECF /* TypeTableViewController.m */,
+				378C33B21A28A444001CAECF /* TypeTableViewController.xib */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		378FCF551A1B79E000E12BBE /* Libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +510,7 @@
 		6751A9731A1FF413004B68E8 /* AddReminder */ = {
 			isa = PBXGroup;
 			children = (
+				378C33AD1A28A03D001CAECF /* Model */,
 				6751A9A61A2008A1004B68E8 /* AddReminderViewController.h */,
 				6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */,
 				6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */,
@@ -662,6 +680,7 @@
 				37E3F2EE1A1A1FED00BF609B /* twitter_btn.png in Resources */,
 				6751A99D1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */,
 				6751A9A41A200543004B68E8 /* RenewalViewController.xib in Resources */,
+				378C33B31A28A444001CAECF /* TypeTableViewController.xib in Resources */,
 				37EC9DCE1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
 				6751A9911A1FF611004B68E8 /* MenuViewController.xib in Resources */,
 				37EC9DD41A1E084B00812CD3 /* mobile.png in Resources */,
@@ -696,6 +715,7 @@
 				37E3F2DE1A1A0D0B00BF609B /* login_bg@2x.png in Resources */,
 				37E3F2E01A1A0D0B00BF609B /* login_bg@3x.png in Resources */,
 				37EC9DC71A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
+				378C33B41A28A444001CAECF /* TypeTableViewController.xib in Resources */,
 				37FB1FFA1A234A66005E36A5 /* car.png in Resources */,
 				37EC9DDE1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DC01A1DFA1C00812CD3 /* app_bg.png in Resources */,
@@ -732,6 +752,7 @@
 				37EC9DF31A1E0C6500812CD3 /* AFHTTPClient.m in Sources */,
 				6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */,
 				37E3F2D61A1A0C7F00BF609B /* MainViewController.m in Sources */,
+				378C33B01A28A055001CAECF /* TypeTableViewController.m in Sources */,
 				37E3F2AB1A19B27B00BF609B /* main.m in Sources */,
 				6751A9851A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */,
 				6751A99B1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */,
@@ -768,6 +789,7 @@
 				37E3F2C81A19B27B00BF609B /* ReminderServiceTests.m in Sources */,
 				37EC9E021A1E0C6500812CD3 /* AFXMLRequestOperation.m in Sources */,
 				37EC9E0C1A1E0C8900812CD3 /* AFNetworkingSynchronousSingleton.m in Sources */,
+				378C33B11A28A055001CAECF /* TypeTableViewController.m in Sources */,
 				6751A98A1A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				37EC9DFC1A1E0C6500812CD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				37EC9DF61A1E0C6500812CD3 /* AFHTTPRequestOperation.m in Sources */,
