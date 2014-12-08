@@ -30,6 +30,7 @@
     _userId = [[[NSUserDefaults standardUserDefaults] objectForKey:kUserId] intValue];
     
     [[AFNetworkingSingleton sharedClient] getPath:[NSString stringWithFormat:@"http://topapp.us/user/view?id=%d", _userId] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SVProgressHUD dismiss];
         NSDictionary *user = [responseObject objectForKey:@"user"];
         
         _txtTitle.text = [user objectForKey:@"title"];
@@ -38,7 +39,7 @@
         _txtMobile.text = [user objectForKey:@"mobile"];
         _txtSurename.text = [user objectForKey:@"surname"];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 

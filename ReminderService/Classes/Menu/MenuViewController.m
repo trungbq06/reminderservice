@@ -38,12 +38,14 @@
 */
 
 - (IBAction)profileClick:(id)sender {
-    ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+    ProfileViewController *profile = [[ProfileViewController alloc] init];
     
     MenuViewController *menuController = [[MenuViewController alloc] init];
-
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:profile];
+    navController.navigationBarHidden = TRUE;
+    
     MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
-                                                    containerWithCenterViewController:profile
+                                                    containerWithCenterViewController:navController
                                                     leftMenuViewController:menuController
                                                     rightMenuViewController:nil];
     

@@ -16,6 +16,7 @@
 #import "MFSideMenuContainerViewController.h"
 #import "MenuViewController.h"
 #import "DashboardViewController.h"
+#import "ProfileViewController.h"
 #import "SVProgressHUD.h"
 
 // The twitter API key you setup in the Twitter developer console

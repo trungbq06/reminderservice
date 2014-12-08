@@ -56,6 +56,7 @@
         _provider.text = [result objectForKey:@"provider"];
         _price.text = [result objectForKey:@"price"];
         _notes.text = [result objectForKey:@"notes"];
+        _dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[result objectForKey:@"due"] intValue]];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -99,7 +100,7 @@
         
         NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
         
-        [params setObject:[_renewal objectForKey:@"id"] forKey:@"id"];
+        [params setObject:[NSNumber numberWithInt:_renewalId] forKey:@"id"];
         
         [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/renewal/delete" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
             [SVProgressHUD dismiss];

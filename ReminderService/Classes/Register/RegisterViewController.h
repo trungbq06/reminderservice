@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtMobile;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnAgree;
+@property (weak, nonatomic) IBOutlet UIView *registerBg;
 
 - (IBAction)btnLoginClick:(id)sender;
 - (IBAction)btnRegisterClick:(id)sender;

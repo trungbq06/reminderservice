@@ -20,7 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    _registerBg.layer.cornerRadius = 10;
+    _registerBg.backgroundColor = [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -142,7 +144,7 @@
         NSString *email = _txtEmail.text;
         
         [params setObject:title forKey:@"title"];
-        [params setObject:firstName forKey:@"first_name"];
+        [params setObject:firstName forKey:@"firstname"];
         [params setObject:surName forKey:@"surname"];
         [params setObject:mobile forKey:@"mobile"];
         [params setObject:password forKey:@"password"];

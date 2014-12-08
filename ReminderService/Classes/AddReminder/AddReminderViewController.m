@@ -142,6 +142,9 @@
         return;
     }
     
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"];
+    
+    [params setObject:userId forKey:@"user_id"];
     [params setObject:type forKey:@"type"];
     [params setObject:startDate forKey:@"start_date"];
     [params setObject:renewalDate forKey:@"renewal_date"];

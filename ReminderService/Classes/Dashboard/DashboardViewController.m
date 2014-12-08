@@ -38,16 +38,22 @@
     
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
-    [[AFNetworkingSingleton sharedClient] getPath:@"http://topapp.us/renewal/list" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [params setObject:userId forKey:@"user_id"];
+    
+    [[AFNetworkingSingleton sharedClient] getPath:@"http://topapp.us/renewal/list" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [SVProgressHUD dismiss];
+        [_lessData removeAllObjects];
+        [_largeData removeAllObjects];
         
         NSDictionary *result = [responseObject objectForKey:@"result"];
         
-        [_lessData removeAllObjects];
-        [_lessData addObjectsFromArray:[result objectForKey:@"less"]];
-        
-        [_largeData removeAllObjects];
-        [_largeData addObjectsFromArray:[result objectForKey:@"large"]];
+        if ([result count] > 0) {
+            [_lessData addObjectsFromArray:[result objectForKey:@"less"]];
+            
+            [_largeData addObjectsFromArray:[result objectForKey:@"large"]];
+        }
         
         [_tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
