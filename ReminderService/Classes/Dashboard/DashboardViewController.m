@@ -160,8 +160,9 @@
     } else {
         currObject = [_largeData objectAtIndex:indexPath.row];
     }
-    
-    [renewal setRenewal:currObject];
+//
+//    [renewal setRenewal:currObject];
+    renewal.renewalId = [[currObject objectForKey:@"id"] intValue];
     
     [self.navigationController pushViewController:renewal animated:YES];
 }

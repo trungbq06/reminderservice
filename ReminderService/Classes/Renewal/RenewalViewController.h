@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenewalViewController : UIViewController
+@interface RenewalViewController : UIViewController < UIAlertViewDelegate >
 
 @property (nonatomic, retain) NSDictionary *renewal;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *price;
 @property (weak, nonatomic) IBOutlet UITextView *notes;
 
+@property (nonatomic, assign) int               renewalId;
+
 - (IBAction)btnBackClick:(id)sender;
 - (IBAction)btnEditClick:(id)sender;
+- (IBAction)btnDeleteClick:(id)sender;
+
 @end

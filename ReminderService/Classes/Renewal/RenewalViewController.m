@@ -8,6 +8,8 @@
 
 #import "RenewalViewController.h"
 #import "AddReminderViewController.h"
+#import "SVProgressHUD.h"
+#import "AFNetworkingSingleton.h"
 
 @interface RenewalViewController ()
 
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    /*
     [_dueDay setText:[NSString stringWithFormat:@"%@ days", [_renewal objectForKey:@"due"]]];
     [_lbTitle setText:[_renewal objectForKey:@"type"]];
     [_startDate setText:[_renewal objectForKey:@"start_date"]];
@@ -26,11 +29,36 @@
     [_provider2 setText:[_renewal objectForKey:@"provider"]];
     [_price setText:[_renewal objectForKey:@"price"]];
     [_notes setText:[_renewal objectForKey:@"notes"]];
+    */
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self loadData];
+}
+
+- (void) loadData {
+    NSString *urlGet = [NSString stringWithFormat:@"http://topapp.us/renewal/view?id=%d", _renewalId];
+    
+    [[AFNetworkingSingleton sharedClient] getPath:urlGet parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *result = [responseObject objectForKey:@"result"];
+        
+        _lbTitle.text = [result objectForKey:@"type"];
+        _startDate.text = [result objectForKey:@"start_date"];
+        _renewalDate.text = [result objectForKey:@"renewal_date"];
+        _provider.text = [result objectForKey:@"provider"];
+        _price.text = [result objectForKey:@"price"];
+        _notes.text = [result objectForKey:@"notes"];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 
 /*
@@ -49,8 +77,47 @@
 
 - (IBAction)btnEditClick:(id)sender {
     AddReminderViewController *reminderController = [[AddReminderViewController alloc] initWithNibName:@"AddReminderViewController" bundle:nil];
+    reminderController.renewalId = _renewalId;
     
     [self.navigationController pushViewController:reminderController animated:YES];
+}
+
+-(void) showAlert: (NSString*) title message:(NSString*) message {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+- (IBAction)btnDeleteClick:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete" message:@"Are you sure to delete ?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+        
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+        
+        [params setObject:[_renewal objectForKey:@"id"] forKey:@"id"];
+        
+        [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/renewal/delete" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            [SVProgressHUD dismiss];
+            
+            NSDictionary *result = (NSDictionary*) responseObject;
+            int errorCode = [[result objectForKey:@"error_code"] intValue];
+            
+            if (errorCode == kSuccess) {
+                [self showAlert:@"Delete" message:@"Deleted successfully"];
+                
+                [self.navigationController popViewControllerAnimated:TRUE];
+            } else {
+                [self showAlert:@"Delete" message:[NSString stringWithFormat:@"Delete error. There is some error with server!"]];
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+        }];
+    }
 }
 
 @end

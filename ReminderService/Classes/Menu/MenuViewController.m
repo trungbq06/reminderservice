@@ -8,6 +8,8 @@
 
 #import "MenuViewController.h"
 #import "MainViewController.h"
+#import "MFSideMenuContainerViewController.h"
+#import "ProfileViewController.h"
 
 @interface MenuViewController ()
 
@@ -36,7 +38,16 @@
 */
 
 - (IBAction)profileClick:(id)sender {
+    ProfileViewController *profile = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
     
+    MenuViewController *menuController = [[MenuViewController alloc] init];
+
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:profile
+                                                    leftMenuViewController:menuController
+                                                    rightMenuViewController:nil];
+    
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:container];
 }
 
 - (IBAction)webSiteClick:(id)sender {

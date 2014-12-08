@@ -65,8 +65,6 @@
     NSString *sType = [_data objectAtIndex:indexPath.row];
     
     [[NSUserDefaults standardUserDefaults] setObject:sType forKey:@"s_type"];
-    
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btnBackClick:(id)sender {

@@ -13,3 +13,5 @@
 #import "Constant.h"
 
 #endif
+
+#define kUserId @"user_id"

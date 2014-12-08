@@ -151,9 +151,11 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         
         NSDictionary *result = (NSDictionary*) responseObject;
         int errorCode = [[result objectForKey:@"error_code"] intValue];
-        NSString *errorMsg = [result objectForKey:@"error_msg"];
+        NSString *userId = [result objectForKey:@"user_id"];
         
         if (errorCode == kSuccess) {
+            [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:[userId intValue]] forKey:kUserId];
+            
             if (_btnKeep.selected) {
                 // Save session
                 [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"email"] forKey:kUserEmail];
@@ -173,7 +175,7 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 
 - (void) showDashboard {
     MenuViewController *menuController = [[MenuViewController alloc] init];
-    
+
     DashboardViewController *contentController = [[DashboardViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];
     navController.navigationBarHidden = TRUE;

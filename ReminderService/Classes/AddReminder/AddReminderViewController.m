@@ -10,7 +10,6 @@
 #import "DatePickerPopoverController.h"
 #import "AFNetworkingSingleton.h"
 #import "SVProgressHUD.h"
-#import "TypeTableViewController.h"
 
 @interface AddReminderViewController ()
 
@@ -22,21 +21,32 @@
     [super viewDidLoad];
     
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    _txtStartDate.leftView = paddingView;
+    _txtStartDate.leftViewMode = UITextFieldViewModeAlways;
+
+    UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    _txtPrice.leftView = paddingView2;
+    _txtPrice.leftViewMode = UITextFieldViewModeAlways;
     
-//    _txtStartDate.leftView = paddingView;
-//    _txtStartDate.leftViewMode = UITextFieldViewModeAlways;
-//    
-//    _txtPrice.leftView = paddingView;
-//    _txtPrice.leftViewMode = UITextFieldViewModeAlways;
-//    
-//    _txtProvider.leftView = paddingView;
-//    _txtProvider.leftViewMode = UITextFieldViewModeAlways;
-//    
-//    _txtRenewalDate.leftView = paddingView;
-//    _txtRenewalDate.leftViewMode = UITextFieldViewModeAlways;
-//    
-//    _txtType.leftView = paddingView;
-//    _txtType.leftViewMode = UITextFieldViewModeAlways;
+    UIView *paddingView3 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    _txtProvider.leftView = paddingView3;
+    _txtProvider.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *paddingView4 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    _txtRenewalDate.leftView = paddingView4;
+    _txtRenewalDate.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *paddingView5 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    _txtType.leftView = paddingView5;
+    _txtType.leftViewMode = UITextFieldViewModeAlways;
+    
+    _typeData = [[NSMutableArray alloc] initWithObjects:@"Mr", @"Mrs", @"Miss", @"Mis", @"Doctor", nil];
+    [_tableView reloadData];
+    _tableView.hidden = YES;
+    
+    if (_renewalId > 0) {
+        [self loadData];
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -44,7 +54,7 @@
     [super viewWillAppear:animated];
     
     NSString *sType = [[NSUserDefaults standardUserDefaults] objectForKey:@"s_type"];
-    
+
     if (sType)
         _txtType.text = sType;
 }
@@ -54,15 +64,40 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Table view
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return [_typeData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TypeCell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TypeCell"];
+    }
+    
+    NSString *type = [_typeData objectAtIndex:indexPath.row];
+    cell.textLabel.text = type;
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *sType = [_typeData objectAtIndex:indexPath.row];
+    
+    _txtType.text = sType;
+    _tableView.hidden = YES;
+}
 
 -(void) showAlert: (NSString*) title message:(NSString*) message {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -113,8 +148,13 @@
     [params setObject:provider forKey:@"provider"];
     [params setObject:price forKey:@"price"];
     [params setObject:notes forKey:@"notes"];
+    [params setObject:[NSNumber numberWithInt:_renewalId] forKey:@"id"];
     
-    [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/renewal/create" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSString *url = @"http://topapp.us/renewal/create";
+    if (_renewalId > 0) {
+        url = @"http://topapp.us/renewal/edit";
+    }
+    [[AFNetworkingSingleton sharedClient] postPath:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [SVProgressHUD dismiss];
         
         NSDictionary *result = (NSDictionary*) responseObject;
@@ -122,8 +162,6 @@
         NSString *errorMsg = [result objectForKey:@"error_msg"];
         
         if (errorCode == kSuccess) {
-//            [self showAlert:@"Add Renewal" message:@"Added successfully !"];
-            
             [self.navigationController popViewControllerAnimated:TRUE];
         } else {
             [self showAlert:@"Add Renewal" message:[NSString stringWithFormat:@"Add error. %@!", errorMsg]];
@@ -144,6 +182,29 @@
     [self.view endEditing:YES];
     
     [_dateView removeFromSuperview];
+    _tableView.hidden = YES;
+}
+
+#pragma mark - Load data
+- (void) loadData {
+    NSString *urlGet = [NSString stringWithFormat:@"http://topapp.us/renewal/view?id=%d", _renewalId];
+    
+    [[AFNetworkingSingleton sharedClient] getPath:urlGet parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSDictionary *result = [responseObject objectForKey:@"result"];
+        
+        _txtType.text = [result objectForKey:@"type"];
+        _txtStartDate.text = [result objectForKey:@"start_date"];
+        _txtRenewalDate.text = [result objectForKey:@"renewal_date"];
+        _txtProvider.text = [result objectForKey:@"provider"];
+        _txtPrice.text = [result objectForKey:@"price"];
+        _txtNotes.text = [result objectForKey:@"notes"];
+        
+        _txtStartDate.userInteractionEnabled = NO;
+        _txtRenewalDate.userInteractionEnabled = NO;
+        [_btnAdd setTitle:@"Save" forState:UIControlStateNormal];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
 }
 
 - (void) initDatePicker {
@@ -194,10 +255,9 @@
         
         return NO;
     } else if (textField == _txtType) {
-        TypeTableViewController *typeController = [[TypeTableViewController alloc] initWithNibName:@"TypeTableViewController" bundle:nil];
-//        typeController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        
-        [self.navigationController pushViewController:typeController animated:YES];
+        NSIndexPath *selected = [_tableView indexPathForSelectedRow];
+        [_tableView deselectRowAtIndexPath:selected animated:NO];
+        _tableView.hidden = NO;
         
         return NO;
     }

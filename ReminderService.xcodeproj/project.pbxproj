@@ -135,6 +135,10 @@
 		6751A9AA1A2008A1004B68E8 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */; };
 		6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
 		6751A9AC1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
+		67E8E52F1A34FC0E009FF488 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */; };
+		67E8E5301A34FC0E009FF488 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */; };
+		67E8E5311A34FC0E009FF488 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */; };
+		67E8E5321A34FC0E009FF488 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +257,9 @@
 		6751A9A61A2008A1004B68E8 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
 		6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
 		6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReminderViewController.xib; sourceTree = "<group>"; };
+		67E8E52C1A34FC0E009FF488 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +426,7 @@
 		37E3F2D21A1A0C5E00BF609B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				67E8E52B1A34FBFD009FF488 /* Profile */,
 				6751A98B1A1FF602004B68E8 /* Menu */,
 				6751A9731A1FF413004B68E8 /* AddReminder */,
 				6751A9741A1FF413004B68E8 /* Dashboard */,
@@ -573,6 +581,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		67E8E52B1A34FBFD009FF488 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				67E8E52C1A34FC0E009FF488 /* ProfileViewController.h */,
+				67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */,
+				67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -681,6 +699,7 @@
 				6751A99D1A1FFF2C004B68E8 /* DashboardTableViewCell.xib in Resources */,
 				6751A9A41A200543004B68E8 /* RenewalViewController.xib in Resources */,
 				378C33B31A28A444001CAECF /* TypeTableViewController.xib in Resources */,
+				67E8E5311A34FC0E009FF488 /* ProfileViewController.xib in Resources */,
 				37EC9DCE1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
 				6751A9911A1FF611004B68E8 /* MenuViewController.xib in Resources */,
 				37EC9DD41A1E084B00812CD3 /* mobile.png in Resources */,
@@ -720,6 +739,7 @@
 				37EC9DDE1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DC01A1DFA1C00812CD3 /* app_bg.png in Resources */,
 				6751A9921A1FF611004B68E8 /* MenuViewController.xib in Resources */,
+				67E8E5321A34FC0E009FF488 /* ProfileViewController.xib in Resources */,
 				37E3F2F51A1A209900BF609B /* password_icon.png in Resources */,
 				6751A9961A1FF9C4004B68E8 /* menu.png in Resources */,
 				6751A97C1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */,
@@ -753,6 +773,7 @@
 				6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */,
 				37E3F2D61A1A0C7F00BF609B /* MainViewController.m in Sources */,
 				378C33B01A28A055001CAECF /* TypeTableViewController.m in Sources */,
+				67E8E52F1A34FC0E009FF488 /* ProfileViewController.m in Sources */,
 				37E3F2AB1A19B27B00BF609B /* main.m in Sources */,
 				6751A9851A1FF5D1004B68E8 /* MFSideMenuContainerViewController.m in Sources */,
 				6751A99B1A1FFF2C004B68E8 /* DashboardTableViewCell.m in Sources */,
@@ -792,6 +813,7 @@
 				378C33B11A28A055001CAECF /* TypeTableViewController.m in Sources */,
 				6751A98A1A1FF5D1004B68E8 /* UIViewController+MFSideMenuAdditions.m in Sources */,
 				37EC9DFC1A1E0C6500812CD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				67E8E5301A34FC0E009FF488 /* ProfileViewController.m in Sources */,
 				37EC9DF61A1E0C6500812CD3 /* AFHTTPRequestOperation.m in Sources */,
 				378FCF641A1B7CDA00E12BBE /* FHSStream.m in Sources */,
 				6751A9881A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */,

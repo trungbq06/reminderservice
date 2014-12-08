@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TypeTableViewController.h"
 
-@interface AddReminderViewController : UIViewController < UITextFieldDelegate >
+@interface AddReminderViewController : UIViewController < UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate >
 
 @property (weak, nonatomic) IBOutlet UITextField *txtType;
 @property (weak, nonatomic) IBOutlet UITextField *txtStartDate;
@@ -20,6 +21,12 @@
 @property (nonatomic, retain) UIView            *dateView;
 @property (nonatomic, retain) UIDatePicker      *datePicker;
 @property (nonatomic, retain) UITextField       *currTextField;
+
+@property (nonatomic, assign) int               renewalId;
+@property (nonatomic, retain) TypeTableViewController *typeController;
+@property (nonatomic, retain) NSMutableArray    *typeData;
+@property (nonatomic, retain) IBOutlet UITableView       *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *btnAdd;
 
 - (IBAction)btnAddClick:(id)sender;
 - (IBAction)btnCancelClick:(id)sender;
