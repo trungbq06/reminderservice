@@ -28,8 +28,14 @@
     // Override point for customization after application launch.
     
     [FBAppEvents activateApp];
+
     
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

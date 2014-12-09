@@ -25,6 +25,8 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 
 #define kUserEmail @"user_email"
 #define kUserPassword @"user_password"
+#define kFacebook 1
+#define kTwitter  2
 
 @interface MainViewController () <FHSTwitterEngineAccessTokenDelegate>
 
@@ -73,6 +75,44 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
     }
 }
 
+- (void) updateUser:(NSString*) email username:(NSString*) username service: (int) service
+{
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+    NSString *title = @"";
+    NSString *firstName = username;
+    NSString *surName = @"";
+    NSString *mobile = @"";
+    NSString *password = @"";
+    
+    [params setObject:title forKey:@"title"];
+    [params setObject:firstName forKey:@"firstname"];
+    [params setObject:surName forKey:@"surname"];
+    [params setObject:mobile forKey:@"mobile"];
+    [params setObject:password forKey:@"password"];
+    [params setObject:email forKey:@"email"];
+    [params setObject:[NSNumber numberWithInt:service] forKey:@"service"];
+    
+    [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/user/create" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [SVProgressHUD dismiss];
+        
+        NSDictionary *result = (NSDictionary*) responseObject;
+        int errorCode = [[result objectForKey:@"error_code"] intValue];
+        
+        NSString *userId = [result objectForKey:@"user_id"];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:[userId intValue]] forKey:kUserId];
+        
+        if (errorCode == kSuccess) {
+            NSLog(@"Created");
+        } else {
+            NSLog(@"Exist");
+        }
+        
+        [self loggedIn];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    }];
+}
+
 - (void)loggedIn {
     [self showDashboard];
 }
@@ -101,11 +141,26 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         }
         
         // if the session isn't open, let's open it now and present the login UX to the user
+        
         [appDelegate.session openWithCompletionHandler:^(FBSession *session,
                                                          FBSessionState status,
                                                          NSError *error) {
+            [FBSession setActiveSession:appDelegate.session];
+            
             // and here we make sure to update our UX according to the new session state
-            [self loggedIn];
+            [FBRequestConnection startWithGraphPath:@"/v1.0/me"
+                                         parameters:nil
+                                         HTTPMethod:@"GET"
+                                  completionHandler:^(
+                                                      FBRequestConnection *connection,
+                                                      NSDictionary *result,
+                                                      NSError *error
+                                                      ) {
+                                      NSString* _fbName = [result objectForKey:@"name"];
+                                      NSString* _fbEmail = [result objectForKey:@"email"];
+                                      
+                                      [self updateUser:_fbEmail username:_fbName service:kFacebook];
+                                  }];
         }];
     }
 }
