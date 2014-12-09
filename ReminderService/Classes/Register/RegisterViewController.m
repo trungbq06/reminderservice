@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     _registerBg.layer.cornerRadius = 10;
-    _registerBg.backgroundColor = [UIColor grayColor];
+    _registerBg.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -175,8 +175,7 @@
 }
 
 - (IBAction)termClick:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Opening" message:@"Add link to open me" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.comparewithus.com/legals/terms/"]];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

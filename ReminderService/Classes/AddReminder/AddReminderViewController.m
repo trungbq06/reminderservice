@@ -258,9 +258,12 @@
         
         return NO;
     } else if (textField == _txtType) {
-        NSIndexPath *selected = [_tableView indexPathForSelectedRow];
-        [_tableView deselectRowAtIndexPath:selected animated:NO];
-        _tableView.hidden = NO;
+//        NSIndexPath *selected = [_tableView indexPathForSelectedRow];
+//        [_tableView deselectRowAtIndexPath:selected animated:NO];
+//        _tableView.hidden = NO;
+        
+        TypeTableViewController *typeController = [[TypeTableViewController alloc] initWithNibName:@"TypeTableViewController" bundle:nil];
+        [self.navigationController pushViewController:typeController animated:TRUE];
         
         return NO;
     }

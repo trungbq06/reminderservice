@@ -7,6 +7,7 @@
 //
 
 #import "TypeTableViewController.h"
+#import "SubTypeTableViewController.h"
 
 @interface TypeTableViewController ()
 
@@ -21,7 +22,7 @@
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
     
-    _data = [[NSMutableArray alloc] initWithObjects:@"Mr", @"Mrs", @"Miss", @"Mis", @"Doctor", nil];
+    _data = [[NSMutableArray alloc] initWithObjects:@"Home", @"Insurance", @"Lifestyle", @"Motoring", @"Travel", @"Utilities & Service", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,7 +65,9 @@
 {
     NSString *sType = [_data objectAtIndex:indexPath.row];
     
-    [[NSUserDefaults standardUserDefaults] setObject:sType forKey:@"s_type"];
+    SubTypeTableViewController *subController = [[SubTypeTableViewController alloc] initWithNibName:@"SubTypeTableViewController" bundle:nil];
+    subController.selectCate = sType;
+    [self.navigationController pushViewController:subController animated:TRUE];
 }
 
 - (IBAction)btnBackClick:(id)sender {

@@ -11,6 +11,9 @@
 #import "MFSideMenuContainerViewController.h"
 #import "ProfileViewController.h"
 
+#define kUserEmail @"user_email"
+#define kUserPassword @"user_password"
+
 @interface MenuViewController ()
 
 @end
@@ -57,6 +60,11 @@
 }
 
 - (IBAction)logoutClick:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kUserEmail];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kUserPassword];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"keep"];
+    
+    
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
     MainViewController *mainController = (MainViewController*)[mainStoryboard instantiateViewControllerWithIdentifier:@"MainViewController"];

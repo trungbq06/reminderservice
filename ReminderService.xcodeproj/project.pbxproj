@@ -105,6 +105,12 @@
 		37EC9E121A1E108600812CD3 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */; };
 		37EC9E131A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
 		37EC9E141A1E108600812CD3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC9E101A1E108600812CD3 /* SVProgressHUD.m */; };
+		37F827A41A375CDF007DF38D /* SubTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F827A21A375CDF007DF38D /* SubTypeTableViewController.m */; };
+		37F827A51A375CDF007DF38D /* SubTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F827A21A375CDF007DF38D /* SubTypeTableViewController.m */; };
+		37F827A61A375CDF007DF38D /* SubTypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F827A31A375CDF007DF38D /* SubTypeTableViewController.xib */; };
+		37F827A71A375CDF007DF38D /* SubTypeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F827A31A375CDF007DF38D /* SubTypeTableViewController.xib */; };
+		37F827A91A375FCE007DF38D /* dashboard_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F827A81A375FCE007DF38D /* dashboard_bg.png */; };
+		37F827AA1A375FCE007DF38D /* dashboard_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 37F827A81A375FCE007DF38D /* dashboard_bg.png */; };
 		37FB1FF91A234A66005E36A5 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FB1FF81A234A66005E36A5 /* car.png */; };
 		37FB1FFA1A234A66005E36A5 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 37FB1FF81A234A66005E36A5 /* car.png */; };
 		6751A9791A1FF42B004B68E8 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9771A1FF42B004B68E8 /* DashboardViewController.m */; };
@@ -231,6 +237,10 @@
 		37EC9E0E1A1E108600812CD3 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		37EC9E0F1A1E108600812CD3 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		37EC9E101A1E108600812CD3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		37F827A11A375CDF007DF38D /* SubTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubTypeTableViewController.h; path = ../../../../../ReminderService/ReminderService/Classes/AddReminder/Model/SubTypeTableViewController.h; sourceTree = "<group>"; };
+		37F827A21A375CDF007DF38D /* SubTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubTypeTableViewController.m; path = ../../../../../ReminderService/ReminderService/Classes/AddReminder/Model/SubTypeTableViewController.m; sourceTree = "<group>"; };
+		37F827A31A375CDF007DF38D /* SubTypeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SubTypeTableViewController.xib; path = ../../../../../ReminderService/ReminderService/Classes/AddReminder/Model/SubTypeTableViewController.xib; sourceTree = "<group>"; };
+		37F827A81A375FCE007DF38D /* dashboard_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard_bg.png; sourceTree = "<group>"; };
 		37FB1FF71A22CBD3005E36A5 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		37FB1FF81A234A66005E36A5 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
 		6751A9761A1FF42B004B68E8 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
@@ -288,6 +298,9 @@
 		378C33AD1A28A03D001CAECF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37F827A11A375CDF007DF38D /* SubTypeTableViewController.h */,
+				37F827A21A375CDF007DF38D /* SubTypeTableViewController.m */,
+				37F827A31A375CDF007DF38D /* SubTypeTableViewController.xib */,
 				378C33AE1A28A055001CAECF /* TypeTableViewController.h */,
 				378C33AF1A28A055001CAECF /* TypeTableViewController.m */,
 				378C33B21A28A444001CAECF /* TypeTableViewController.xib */,
@@ -397,6 +410,7 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37F827A81A375FCE007DF38D /* dashboard_bg.png */,
 				370D49701A24DA46002012C0 /* tick_select.png */,
 				37FB1FF81A234A66005E36A5 /* car.png */,
 				6751A9941A1FF9C4004B68E8 /* menu.png */,
@@ -673,6 +687,7 @@
 			files = (
 				37EC9E111A1E108600812CD3 /* SVProgressHUD.bundle in Resources */,
 				37E3F2E61A1A1FED00BF609B /* facebook_btn.png in Resources */,
+				37F827A61A375CDF007DF38D /* SubTypeTableViewController.xib in Resources */,
 				37EC9DD81A1E084B00812CD3 /* register_bg.png in Resources */,
 				37E3F2EC1A1A1FED00BF609B /* register_btn.png in Resources */,
 				370D49711A24DA46002012C0 /* tick_select.png in Resources */,
@@ -685,6 +700,7 @@
 				37E3F2F41A1A209900BF609B /* password_icon.png in Resources */,
 				37EC9DBA1A1DF9BE00812CD3 /* logo_bg.png in Resources */,
 				37E3F2DF1A1A0D0B00BF609B /* login_bg@3x.png in Resources */,
+				37F827A91A375FCE007DF38D /* dashboard_bg.png in Resources */,
 				37EC9DDD1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DBF1A1DFA1C00812CD3 /* app_bg.png in Resources */,
 				6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */,
@@ -736,6 +752,7 @@
 				37EC9DC71A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
 				378C33B41A28A444001CAECF /* TypeTableViewController.xib in Resources */,
 				37FB1FFA1A234A66005E36A5 /* car.png in Resources */,
+				37F827AA1A375FCE007DF38D /* dashboard_bg.png in Resources */,
 				37EC9DDE1A1E0A5D00812CD3 /* btn_back.png in Resources */,
 				37EC9DC01A1DFA1C00812CD3 /* app_bg.png in Resources */,
 				6751A9921A1FF611004B68E8 /* MenuViewController.xib in Resources */,
@@ -745,6 +762,7 @@
 				6751A97C1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */,
 				37EC9DCF1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
 				37EC9E121A1E108600812CD3 /* SVProgressHUD.bundle in Resources */,
+				37F827A71A375CDF007DF38D /* SubTypeTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,6 +783,7 @@
 				6751A9871A1FF5D1004B68E8 /* MFSideMenuShadow.m in Sources */,
 				37C478B01A24524600D1491C /* DatePickerPopoverController.m in Sources */,
 				6751A9A21A200543004B68E8 /* RenewalViewController.m in Sources */,
+				37F827A41A375CDF007DF38D /* SubTypeTableViewController.m in Sources */,
 				37EC9E011A1E0C6500812CD3 /* AFXMLRequestOperation.m in Sources */,
 				37EC9DFF1A1E0C6500812CD3 /* AFURLConnectionOperation.m in Sources */,
 				6751A98F1A1FF611004B68E8 /* MenuViewController.m in Sources */,
@@ -797,6 +816,7 @@
 				37EC9E001A1E0C6500812CD3 /* AFURLConnectionOperation.m in Sources */,
 				6751A9AA1A2008A1004B68E8 /* AddReminderViewController.m in Sources */,
 				37EC9E041A1E0C6500812CD3 /* UIImageView+AFNetworking.m in Sources */,
+				37F827A51A375CDF007DF38D /* SubTypeTableViewController.m in Sources */,
 				6751A97A1A1FF42B004B68E8 /* DashboardViewController.m in Sources */,
 				378FCF661A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */,
 				37EC9DCD1A1E06BC00812CD3 /* RegisterViewController.m in Sources */,
