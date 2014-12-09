@@ -15,3 +15,4 @@
 #endif
 
 #define kUserId @"user_id"
+#define kDeviceToken @"device_token"

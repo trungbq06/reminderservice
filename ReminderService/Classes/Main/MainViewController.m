@@ -75,6 +75,31 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
     }
 }
 
+- (void) updateDevice
+{
+    NSString *deviceToken = [[NSUserDefaults standardUserDefaults] objectForKey:kDeviceToken];
+    NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:kUserId];
+    
+    if (![deviceToken isEqualToString:@""]) {
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
+        [params setObject:deviceToken forKey:@"device_id"];
+        [params setObject:userId forKey:@"user_id"];
+        
+        [[AFNetworkingSingleton sharedClient] postPath:@"http://topapp.us/user/device" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSDictionary *result = (NSDictionary*) responseObject;
+            int errorCode = [[result objectForKey:@"error_code"] intValue];
+            
+            if (errorCode == kSuccess) {
+                NSLog(@"Created");
+            } else {
+                NSLog(@"Exist");
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            
+        }];
+    }
+}
+
 - (void) updateUser:(NSString*) email username:(NSString*) username service: (int) service
 {
     NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithCapacity:0];
@@ -102,9 +127,9 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
         [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:[userId intValue]] forKey:kUserId];
         
         if (errorCode == kSuccess) {
-            NSLog(@"Created");
+            NSLog(@"Created device");
         } else {
-            NSLog(@"Exist");
+            NSLog(@"Device exist");
         }
         
         [self loggedIn];
@@ -114,6 +139,8 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
 }
 
 - (void)loggedIn {
+    [self updateDevice];
+    
     [self showDashboard];
 }
 
@@ -218,7 +245,7 @@ static NSString * const kTwitterSecretKey = @"EKsolzE25JCONdI6NfiaTX51W8TNqnAMtf
                 [[NSUserDefaults standardUserDefaults] setObject:[params objectForKey:@"password"] forKey:kUserPassword];
             }
             
-            [self showDashboard];
+            [self loggedIn];
         } else {
             [self showAlert:@"Error" message:@"Your details appear to be incorrect, please try again"];
         }
