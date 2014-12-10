@@ -20,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Reset
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"s_type"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"type_id"];
+    
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
     _txtStartDate.leftView = paddingView;
     _txtStartDate.leftViewMode = UITextFieldViewModeAlways;
@@ -143,6 +147,10 @@
     }
     
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"];
+    NSString *typeId = [[NSUserDefaults standardUserDefaults] objectForKey:@"type_id"];
+    if ([typeId intValue] != _typeId) {
+        _typeId = [typeId intValue];
+    }
     
     [params setObject:userId forKey:@"user_id"];
     [params setObject:type forKey:@"type"];
@@ -152,6 +160,7 @@
     [params setObject:price forKey:@"price"];
     [params setObject:notes forKey:@"notes"];
     [params setObject:[NSNumber numberWithInt:_renewalId] forKey:@"id"];
+    [params setObject:[NSNumber numberWithInt:_typeId] forKey:@"type_id"];
     
     NSString *url = @"http://topapp.us/renewal/create";
     if (_renewalId > 0) {

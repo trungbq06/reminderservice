@@ -86,6 +86,7 @@
     NSString *sType = [_data objectAtIndex:indexPath.row];
     
     [[NSUserDefaults standardUserDefaults] setObject:sType forKey:@"s_type"];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt: _typeId] forKey:@"type_id"];
     
     NSArray *viewControllers = [self.navigationController viewControllers];
     [self.navigationController popToViewController:[viewControllers objectAtIndex:[viewControllers count] - 3] animated:NO];

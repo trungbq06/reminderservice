@@ -15,6 +15,8 @@
 @property (nonatomic, retain) NSString *selectCate;
 @property (nonatomic, retain) NSMutableDictionary *typeData;
 
+@property (nonatomic, assign) int   typeId;
+
 - (IBAction)btnBackClick:(id)sender;
 
 @end

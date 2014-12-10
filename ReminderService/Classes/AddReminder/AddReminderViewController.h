@@ -23,6 +23,7 @@
 @property (nonatomic, retain) UITextField       *currTextField;
 
 @property (nonatomic, assign) int               renewalId;
+@property (nonatomic, assign) int               typeId;
 @property (nonatomic, retain) TypeTableViewController *typeController;
 @property (nonatomic, retain) NSMutableArray    *typeData;
 @property (nonatomic, retain) IBOutlet UITableView       *tableView;

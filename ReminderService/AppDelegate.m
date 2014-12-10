@@ -29,6 +29,10 @@
     
     [FBAppEvents activateApp];
     
+    // Reset
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"s_type"];
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"type_id"];
+    
     //register APNS
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
     {

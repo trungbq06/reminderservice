@@ -149,6 +149,10 @@
         else
             cell.peopleWith.text = [NSString stringWithFormat:@"%@", [currObject objectForKey:@"provider"]];
         
+        int _typeId = [[currObject objectForKey:@"type_id"] intValue];
+        [cell.imgView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d", _typeId]]];
+        [cell.bgView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
+        
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }

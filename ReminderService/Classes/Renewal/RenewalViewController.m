@@ -50,6 +50,7 @@
     [[AFNetworkingSingleton sharedClient] getPath:urlGet parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *result = [responseObject objectForKey:@"result"];
         
+        _typeId = [[result objectForKey:@"type_id"] intValue];
         _lbTitle.text = [result objectForKey:@"type"];
         _startDate.text = [result objectForKey:@"start_date"];
         _renewalDate.text = [result objectForKey:@"renewal_date"];
@@ -57,6 +58,10 @@
         _price.text = [result objectForKey:@"price"];
         _notes.text = [result objectForKey:@"notes"];
         _dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[result objectForKey:@"due"] intValue]];
+        
+        [_typeIcon setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d", _typeId]]];
+        [_typeView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -79,6 +84,7 @@
 - (IBAction)btnEditClick:(id)sender {
     AddReminderViewController *reminderController = [[AddReminderViewController alloc] initWithNibName:@"AddReminderViewController" bundle:nil];
     reminderController.renewalId = _renewalId;
+    reminderController.typeId = _typeId;
     
     [self.navigationController pushViewController:reminderController animated:YES];
 }

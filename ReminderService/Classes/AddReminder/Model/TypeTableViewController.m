@@ -67,6 +67,8 @@
     
     SubTypeTableViewController *subController = [[SubTypeTableViewController alloc] initWithNibName:@"SubTypeTableViewController" bundle:nil];
     subController.selectCate = sType;
+    subController.typeId = (int)indexPath.row + 1;
+    
     [self.navigationController pushViewController:subController animated:TRUE];
 }
 
