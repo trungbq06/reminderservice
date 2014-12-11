@@ -22,6 +22,7 @@
 		378FCF651A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */; };
 		378FCF661A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */; };
 		378FCF841A1B816000E12BBE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF831A1B816000E12BBE /* Twitter.framework */; };
+		37ADBFCF1A39C2A5005137F2 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ADBFCE1A39C2A5005137F2 /* save.png */; };
 		37C478B01A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
 		37C478B11A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
 		37E3F2AB1A19B27B00BF609B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E3F2AA1A19B27B00BF609B /* main.m */; };
@@ -195,6 +196,7 @@
 		378FCF611A1B7CDA00E12BBE /* FHSTwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
 		378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		378FCF831A1B816000E12BBE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		37ADBFCE1A39C2A5005137F2 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		37C478AE1A24524600D1491C /* DatePickerPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerPopoverController.h; sourceTree = "<group>"; };
 		37C478AF1A24524600D1491C /* DatePickerPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerPopoverController.m; sourceTree = "<group>"; };
 		37E3F2A51A19B27B00BF609B /* ReminderService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderService.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -461,6 +463,7 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37ADBFCE1A39C2A5005137F2 /* save.png */,
 				670A5D871A38F7C7009A06C7 /* add.png */,
 				670A5D881A38F7C7009A06C7 /* add@2x.png */,
 				670A5D891A38F7C7009A06C7 /* type_1_bg.png */,
@@ -804,6 +807,7 @@
 				670A5DAE1A38F7C7009A06C7 /* type_3@2x.png in Resources */,
 				670A5DA21A38F7C7009A06C7 /* add@2x.png in Resources */,
 				670A5DAC1A38F7C7009A06C7 /* type_3_bg@2x.png in Resources */,
+				37ADBFCF1A39C2A5005137F2 /* save.png in Resources */,
 				37E3F2F21A1A209900BF609B /* email_icon.png in Resources */,
 				670A5DB31A38F7C7009A06C7 /* type_5_bg.png in Resources */,
 				37EC9DC61A1DFF9100812CD3 /* PasswordViewController.xib in Resources */,
@@ -1011,7 +1015,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1046,7 +1050,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1068,7 +1072,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1779807e-1dad-47c0-9ee0-4aa65017cc4b";
+				PROVISIONING_PROFILE = "32778e7d-b156-4dcb-bae2-a426e47cdd88";
 			};
 			name = Debug;
 		};
@@ -1087,7 +1091,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1779807e-1dad-47c0-9ee0-4aa65017cc4b";
+				PROVISIONING_PROFILE = "32778e7d-b156-4dcb-bae2-a426e47cdd88";
 			};
 			name = Release;
 		};

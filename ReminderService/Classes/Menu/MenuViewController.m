@@ -43,7 +43,7 @@
 - (IBAction)profileClick:(id)sender {
     ProfileViewController *profile = [[ProfileViewController alloc] init];
     
-    MenuViewController *menuController = [[MenuViewController alloc] init];
+    MenuViewController *menuController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:profile];
     navController.navigationBarHidden = TRUE;
     

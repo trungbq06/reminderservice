@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -52,6 +53,7 @@
                         <constraint firstAttribute="height" constant="30" id="dp5-eK-Suq"/>
                     </constraints>
                     <state key="normal" title="Cancel">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
@@ -70,7 +72,8 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-s4-HWD">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                    <state key="normal" title="Add">
+                    <state key="normal" backgroundImage="add.png">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -180,6 +183,9 @@
                             <include reference="hpQ-ZD-nBx"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="KJW-cn-0Lo"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm8-P8-WRn">
                     <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -199,6 +205,9 @@
                             <include reference="ktC-xH-8iM"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="l3w-5r-4eP"/>
+                    </connections>
                 </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EA7-0Q-bgw">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -218,6 +227,9 @@
                             <include reference="GD4-sZ-R2g"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="nsn-lC-bfa"/>
+                    </connections>
                 </textView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-ab-EHe">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -383,10 +395,11 @@
                     <include reference="cEM-sS-v4l"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="1107" y="885"/>
+            <point key="canvasLocation" x="1059" y="769"/>
         </view>
     </objects>
     <resources>
+        <image name="add.png" width="25" height="25"/>
         <image name="app_bg.png" width="1080" height="1920"/>
         <image name="logo_bg.png" width="669" height="165"/>
     </resources>

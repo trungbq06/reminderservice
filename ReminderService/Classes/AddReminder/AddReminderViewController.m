@@ -148,7 +148,7 @@
     
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"];
     NSString *typeId = [[NSUserDefaults standardUserDefaults] objectForKey:@"type_id"];
-    if ([typeId intValue] != _typeId) {
+    if ([typeId intValue] > 0 && [typeId intValue] != _typeId) {
         _typeId = [typeId intValue];
     }
     
@@ -213,6 +213,7 @@
         
         _txtStartDate.userInteractionEnabled = NO;
         _txtRenewalDate.userInteractionEnabled = NO;
+        [_btnAdd setBackgroundImage:nil forState:UIControlStateNormal];
         [_btnAdd setTitle:@"Save" forState:UIControlStateNormal];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -227,6 +228,9 @@
     _datePicker=[[UIDatePicker alloc]init];
     _datePicker.frame=CGRectMake(0,0,320, 216);
     _datePicker.datePickerMode = UIDatePickerModeDate;
+    NSArray* languages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
+    NSString *language = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value: [languages objectAtIndex:0]];
+    [_datePicker setLocale:[NSLocale localeWithLocaleIdentifier:language]];
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -258,9 +262,10 @@
 #pragma mark - TEXTFIELD DELEGATE
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
+    [_dateView removeFromSuperview];
+    
     if (textField == _txtStartDate || textField == _txtRenewalDate) {
         [self.view endEditing:YES];
-        [_dateView removeFromSuperview];
         
         _currTextField = textField;
         [self initDatePicker];

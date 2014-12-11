@@ -91,7 +91,7 @@ typedef enum {
     if(self.menuContainerView.superview) return;
     
     self.menuContainerView.frame = self.view.bounds;
-    self.menuContainerView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+//    self.menuContainerView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
     [self.view insertSubview:menuContainerView atIndex:0];
     
@@ -419,7 +419,8 @@ typedef enum {
     leftFrame.origin.x = (self.menuSlideAnimationEnabled) ? -1*leftFrame.size.width / self.menuSlideAnimationFactor : 0;
     leftFrame.origin.y = 0;
     [self.leftMenuViewController view].frame = leftFrame;
-    [self.leftMenuViewController view].autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleHeight;
+    self.leftMenuViewController.view.backgroundColor = [UIColor darkGrayColor];
+//    [self.leftMenuViewController view].autoresizingMask = UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleHeight;
 }
 
 - (void) setRightSideMenuFrameToClosedPosition {
@@ -430,7 +431,7 @@ typedef enum {
     rightFrame.origin.x = self.menuContainerView.frame.size.width - self.rightMenuWidth;
     if(self.menuSlideAnimationEnabled) rightFrame.origin.x += self.rightMenuWidth / self.menuSlideAnimationFactor;
     [self.rightMenuViewController view].frame = rightFrame;
-    [self.rightMenuViewController view].autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleHeight;
+//    [self.rightMenuViewController view].autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleHeight;
 }
 
 - (void)alignLeftMenuControllerWithCenterViewController {

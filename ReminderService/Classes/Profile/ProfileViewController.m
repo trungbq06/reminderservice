@@ -56,7 +56,7 @@
 }
 
 - (IBAction)btnBackClick:(id)sender {
-    MenuViewController *menuController = [[MenuViewController alloc] init];
+    MenuViewController *menuController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     
     DashboardViewController *contentController = [[DashboardViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];

@@ -153,6 +153,8 @@
         [cell.imgView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d", _typeId]]];
         [cell.bgView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
         
+//        CGRect cellFrame = cell.frame;
+//        cell.rightImg.frame = CGRectMake(cellFrame.size.width - 100, 0, 100, cell.rightImg.frame.size.height);
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }

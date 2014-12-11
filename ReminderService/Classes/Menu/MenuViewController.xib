@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
@@ -14,15 +15,29 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-6m-7Nh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmE-xR-XHz">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ymu-Cs-uKH"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Your Profile">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="44" y="55" width="313" height="30"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="ymu-Cs-uKH"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="ymu-Cs-uKH"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="profileClick:" destination="-1" eventType="touchUpInside" id="o9K-iS-qd8"/>
@@ -30,13 +45,23 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFR-Iq-Hct">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="0u6-Gw-9e4"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Visit Website">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="44" y="109" width="313" height="34"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="0u6-Gw-9e4"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="0u6-Gw-9e4"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="webSiteClick:" destination="-1" eventType="touchUpInside" id="k0r-2C-ZeM"/>
@@ -44,13 +69,23 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hq6-nt-Mxk">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="9ad-in-elW"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <state key="normal" title="Log Out">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="44" y="160" width="313" height="34"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9ad-in-elW"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="9ad-in-elW"/>
+                        </mask>
                     </variation>
                     <connections>
                         <action selector="logoutClick:" destination="-1" eventType="touchUpInside" id="N1S-Tq-rXB"/>
@@ -58,22 +93,69 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="OBz-6m-7Nh" secondAttribute="bottom" id="6kc-td-EHm"/>
+                <constraint firstItem="OBz-6m-7Nh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CBu-hi-IhE"/>
+                <constraint firstItem="XmE-xR-XHz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="DKG-yy-QPU"/>
+                <constraint firstAttribute="trailing" secondItem="OBz-6m-7Nh" secondAttribute="trailing" id="EEJ-R0-Gmk"/>
+                <constraint firstAttribute="centerX" secondItem="Hq6-nt-Mxk" secondAttribute="centerX" id="LwV-VV-hxz"/>
+                <constraint firstItem="OBz-6m-7Nh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="T2T-P5-AGj"/>
+                <constraint firstItem="Hq6-nt-Mxk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="Z5B-Ll-2Xo"/>
+                <constraint firstItem="RFR-Iq-Hct" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="djG-dR-fPD"/>
+                <constraint firstItem="XmE-xR-XHz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="55" id="f1u-TD-kCf"/>
+                <constraint firstItem="Hq6-nt-Mxk" firstAttribute="top" secondItem="RFR-Iq-Hct" secondAttribute="bottom" constant="17" id="q9D-3R-Kad"/>
+                <constraint firstAttribute="centerX" secondItem="RFR-Iq-Hct" secondAttribute="centerX" id="t5u-uh-qh6"/>
+                <constraint firstItem="RFR-Iq-Hct" firstAttribute="top" secondItem="XmE-xR-XHz" secondAttribute="bottom" constant="24" id="vJD-vh-Tf3"/>
+                <constraint firstAttribute="centerX" secondItem="XmE-xR-XHz" secondAttribute="centerX" id="ynb-Zr-12v"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <variation key="default">
                 <mask key="subviews">
+                    <exclude reference="OBz-6m-7Nh"/>
                     <exclude reference="XmE-xR-XHz"/>
                     <exclude reference="RFR-Iq-Hct"/>
                     <exclude reference="Hq6-nt-Mxk"/>
                 </mask>
+                <mask key="constraints">
+                    <exclude reference="6kc-td-EHm"/>
+                    <exclude reference="CBu-hi-IhE"/>
+                    <exclude reference="EEJ-R0-Gmk"/>
+                    <exclude reference="T2T-P5-AGj"/>
+                    <exclude reference="DKG-yy-QPU"/>
+                    <exclude reference="f1u-TD-kCf"/>
+                    <exclude reference="ynb-Zr-12v"/>
+                    <exclude reference="djG-dR-fPD"/>
+                    <exclude reference="t5u-uh-qh6"/>
+                    <exclude reference="vJD-vh-Tf3"/>
+                    <exclude reference="LwV-VV-hxz"/>
+                    <exclude reference="Z5B-Ll-2Xo"/>
+                    <exclude reference="q9D-3R-Kad"/>
+                </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
+                    <include reference="OBz-6m-7Nh"/>
                     <include reference="XmE-xR-XHz"/>
                     <include reference="RFR-Iq-Hct"/>
                     <include reference="Hq6-nt-Mxk"/>
                 </mask>
+                <mask key="constraints">
+                    <include reference="6kc-td-EHm"/>
+                    <include reference="CBu-hi-IhE"/>
+                    <include reference="EEJ-R0-Gmk"/>
+                    <include reference="T2T-P5-AGj"/>
+                    <include reference="DKG-yy-QPU"/>
+                    <include reference="f1u-TD-kCf"/>
+                    <include reference="ynb-Zr-12v"/>
+                    <include reference="djG-dR-fPD"/>
+                    <include reference="t5u-uh-qh6"/>
+                    <include reference="vJD-vh-Tf3"/>
+                    <include reference="LwV-VV-hxz"/>
+                    <include reference="Z5B-Ll-2Xo"/>
+                    <include reference="q9D-3R-Kad"/>
+                </mask>
             </variation>
-            <point key="canvasLocation" x="189" y="208"/>
+            <point key="canvasLocation" x="236" y="288"/>
         </view>
     </objects>
 </document>

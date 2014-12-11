@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -17,87 +17,133 @@
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="PmH-Cn-p6n">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="-312" y="-38" width="1024" height="877"/>
-                    </variation>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8au-sT-Ag2">
-                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="48C-55-F6L"/>
-                        <constraint firstAttribute="width" constant="35" id="ijt-SL-FUM"/>
+                        <constraint firstAttribute="width" constant="1024" id="J8M-uc-Gzc"/>
                     </constraints>
-                    <state key="normal" title="Back">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="48C-55-F6L"/>
-                            <exclude reference="ijt-SL-FUM"/>
+                            <exclude reference="J8M-uc-Gzc"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="48C-55-F6L"/>
-                            <include reference="ijt-SL-FUM"/>
+                            <include reference="J8M-uc-Gzc"/>
                         </mask>
                     </variation>
-                    <connections>
-                        <action selector="btnBackClick:" destination="-1" eventType="touchUpInside" id="zEJ-CN-ChG"/>
-                    </connections>
-                </button>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DPB-OL-EIW">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="UiT-vJ-zzO">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="5Y3-IJ-qns"/>
+                        <constraint firstAttribute="width" constant="12" id="Lwj-ax-Lid"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="5Y3-IJ-qns"/>
+                            <exclude reference="Lwj-ax-Lid"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="5Y3-IJ-qns"/>
+                            <include reference="Lwj-ax-Lid"/>
+                        </mask>
+                    </variation>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4F-fn-Eze">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="96C-Cx-Vdd"/>
+                        <constraint firstAttribute="width" constant="63" id="EtY-Be-oOy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="96C-Cx-Vdd"/>
+                            <exclude reference="EtY-Be-oOy"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="96C-Cx-Vdd"/>
+                            <include reference="EtY-Be-oOy"/>
+                        </mask>
+                    </variation>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="8au-sT-Ag2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="17" id="168-wz-2qu"/>
+                <constraint firstItem="PmH-Cn-p6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-38" id="38g-mu-lDN"/>
+                <constraint firstItem="UiT-vJ-zzO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="3sg-9n-4t4"/>
                 <constraint firstAttribute="bottom" secondItem="DPB-OL-EIW" secondAttribute="bottom" id="8Yt-OS-TVm"/>
-                <constraint firstItem="DPB-OL-EIW" firstAttribute="top" secondItem="8au-sT-Ag2" secondAttribute="bottom" constant="6" id="Kmb-tJ-JiR"/>
-                <constraint firstItem="8au-sT-Ag2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ukw-ex-8M0"/>
+                <constraint firstItem="PmH-Cn-p6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Leu-JH-X4P"/>
+                <constraint firstItem="O4F-fn-Eze" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="MCX-wb-Vhi"/>
+                <constraint firstItem="UiT-vJ-zzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Pfq-zB-PD3"/>
+                <constraint firstItem="DPB-OL-EIW" firstAttribute="top" secondItem="O4F-fn-Eze" secondAttribute="bottom" constant="8" symbolic="YES" id="asn-X5-yoS"/>
+                <constraint firstItem="DPB-OL-EIW" firstAttribute="centerX" secondItem="PmH-Cn-p6n" secondAttribute="centerX" id="c6d-fa-9pN"/>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="on4-Om-ogG"/>
                 <constraint firstAttribute="centerX" secondItem="DPB-OL-EIW" secondAttribute="centerX" id="sNx-fv-OcH"/>
                 <constraint firstAttribute="trailing" secondItem="DPB-OL-EIW" secondAttribute="trailing" id="vX5-0G-T2R"/>
+                <constraint firstItem="O4F-fn-Eze" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yuv-hG-mIU"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="PmH-Cn-p6n"/>
-                    <exclude reference="8au-sT-Ag2"/>
                     <exclude reference="DPB-OL-EIW"/>
+                    <exclude reference="UiT-vJ-zzO"/>
+                    <exclude reference="O4F-fn-Eze"/>
                 </mask>
                 <mask key="constraints">
-                    <exclude reference="168-wz-2qu"/>
-                    <exclude reference="Ukw-ex-8M0"/>
+                    <exclude reference="3sg-9n-4t4"/>
+                    <exclude reference="Pfq-zB-PD3"/>
+                    <exclude reference="MCX-wb-Vhi"/>
+                    <exclude reference="yuv-hG-mIU"/>
                     <exclude reference="8Yt-OS-TVm"/>
-                    <exclude reference="Kmb-tJ-JiR"/>
+                    <exclude reference="asn-X5-yoS"/>
+                    <exclude reference="c6d-fa-9pN"/>
                     <exclude reference="on4-Om-ogG"/>
                     <exclude reference="sNx-fv-OcH"/>
                     <exclude reference="vX5-0G-T2R"/>
+                    <exclude reference="38g-mu-lDN"/>
+                    <exclude reference="Leu-JH-X4P"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="PmH-Cn-p6n"/>
-                    <include reference="8au-sT-Ag2"/>
                     <include reference="DPB-OL-EIW"/>
+                    <include reference="UiT-vJ-zzO"/>
+                    <include reference="O4F-fn-Eze"/>
                 </mask>
                 <mask key="constraints">
-                    <include reference="168-wz-2qu"/>
-                    <include reference="Ukw-ex-8M0"/>
+                    <include reference="3sg-9n-4t4"/>
+                    <include reference="Pfq-zB-PD3"/>
+                    <include reference="MCX-wb-Vhi"/>
+                    <include reference="yuv-hG-mIU"/>
                     <include reference="8Yt-OS-TVm"/>
-                    <include reference="Kmb-tJ-JiR"/>
+                    <include reference="asn-X5-yoS"/>
+                    <include reference="c6d-fa-9pN"/>
                     <include reference="on4-Om-ogG"/>
                     <include reference="sNx-fv-OcH"/>
                     <include reference="vX5-0G-T2R"/>
+                    <include reference="38g-mu-lDN"/>
+                    <include reference="Leu-JH-X4P"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="887" y="511"/>
+            <point key="canvasLocation" x="621" y="450"/>
         </view>
     </objects>
     <resources>
         <image name="app_bg.png" width="1080" height="1920"/>
+        <image name="btn_back.png" width="24" height="40"/>
     </resources>
 </document>

@@ -115,7 +115,7 @@
             int errorCode = [[result objectForKey:@"error_code"] intValue];
             
             if (errorCode == kSuccess) {
-                [self showAlert:@"Delete" message:@"Deleted successfully"];
+//                [self showAlert:@"Delete" message:@"Deleted successfully"];
                 
                 [self.navigationController popViewControllerAnimated:TRUE];
             } else {
