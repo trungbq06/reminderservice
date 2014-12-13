@@ -56,7 +56,7 @@
 }
 
 - (IBAction)webSiteClick:(id)sender {
-    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.comparewithus.com"]];
 }
 
 - (IBAction)logoutClick:(id)sender {

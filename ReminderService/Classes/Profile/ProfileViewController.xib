@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -536,13 +537,17 @@
                 <constraint firstAttribute="trailing" secondItem="Vbj-Ch-mYY" secondAttribute="trailing" constant="12" id="5go-sM-q8F"/>
                 <constraint firstItem="qir-xP-37J" firstAttribute="top" secondItem="hEX-42-rUI" secondAttribute="bottom" constant="12" id="8Po-HJ-txV"/>
                 <constraint firstAttribute="trailing" secondItem="9zf-HJ-w0S" secondAttribute="trailing" constant="12" id="8eN-za-DcM"/>
+                <constraint firstAttribute="trailing" secondItem="Nch-2g-WP3" secondAttribute="trailing" constant="12" id="ASR-1f-8Y8"/>
+                <constraint firstItem="Nch-2g-WP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="AaB-ef-S4W"/>
                 <constraint firstItem="a7M-eo-ayv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="B3S-W7-jj1"/>
+                <constraint firstAttribute="trailing" secondItem="9zf-HJ-w0S" secondAttribute="trailing" constant="12" id="BQ3-3g-aMR"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="trailing" secondItem="qir-xP-37J" secondAttribute="trailing" id="BVH-ng-JBW"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="leading" secondItem="Nch-2g-WP3" secondAttribute="leading" id="C5A-Tr-LJa"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="trailing" secondItem="9zf-HJ-w0S" secondAttribute="trailing" id="EOW-YO-i5N"/>
                 <constraint firstItem="9zf-HJ-w0S" firstAttribute="top" secondItem="Nch-2g-WP3" secondAttribute="bottom" constant="12" id="ETU-el-7Av"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="top" secondItem="9zf-HJ-w0S" secondAttribute="bottom" constant="12" id="FUw-M2-aiz"/>
                 <constraint firstItem="Nch-2g-WP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="HAr-yO-21V"/>
+                <constraint firstItem="qir-xP-37J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Hpb-9Q-vnL"/>
                 <constraint firstAttribute="centerX" secondItem="Nch-2g-WP3" secondAttribute="centerX" id="JGJ-7U-MER"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Mh2-L2-jHx"/>
                 <constraint firstItem="Vbj-Ch-mYY" firstAttribute="leading" secondItem="9zf-HJ-w0S" secondAttribute="leading" id="N0y-fP-fzI"/>
@@ -562,12 +567,14 @@
                 <constraint firstItem="ehL-bV-ju6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="oLr-Ma-2mO"/>
                 <constraint firstItem="AM1-Qd-QxY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="q3I-7b-0F0"/>
                 <constraint firstItem="Nch-2g-WP3" firstAttribute="top" secondItem="qir-xP-37J" secondAttribute="bottom" constant="12" id="qdL-lT-o1b"/>
+                <constraint firstAttribute="trailing" secondItem="qir-xP-37J" secondAttribute="trailing" constant="12" id="qkt-Oy-WRp"/>
                 <constraint firstItem="hEX-42-rUI" firstAttribute="top" secondItem="AM1-Qd-QxY" secondAttribute="bottom" constant="12" id="rte-ex-3FQ"/>
                 <constraint firstItem="hEX-42-rUI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="t81-ak-DNb"/>
                 <constraint firstAttribute="centerX" secondItem="qir-xP-37J" secondAttribute="centerX" id="ths-dr-PCH"/>
                 <constraint firstAttribute="centerX" secondItem="AM1-Qd-QxY" secondAttribute="centerX" id="vIb-nH-WJ5"/>
                 <constraint firstAttribute="trailing" secondItem="hEX-42-rUI" secondAttribute="trailing" constant="10" id="vdt-0h-NEc"/>
                 <constraint firstAttribute="centerX" secondItem="UYT-V4-rvB" secondAttribute="centerX" id="w9W-0Y-YjV"/>
+                <constraint firstItem="9zf-HJ-w0S" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="yPt-F8-dRh"/>
                 <constraint firstItem="qir-xP-37J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="z7r-bh-EHe"/>
                 <constraint firstAttribute="trailing" secondItem="AM1-Qd-QxY" secondAttribute="trailing" constant="10" id="zKI-O4-nQz"/>
                 <constraint firstItem="UYT-V4-rvB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="zuq-vA-euO"/>
@@ -606,18 +613,24 @@
                     <exclude reference="t81-ak-DNb"/>
                     <exclude reference="vdt-0h-NEc"/>
                     <exclude reference="8Po-HJ-txV"/>
+                    <exclude reference="Hpb-9Q-vnL"/>
                     <exclude reference="Xn2-Gd-L9f"/>
+                    <exclude reference="qkt-Oy-WRp"/>
                     <exclude reference="ths-dr-PCH"/>
                     <exclude reference="z7r-bh-EHe"/>
+                    <exclude reference="ASR-1f-8Y8"/>
+                    <exclude reference="AaB-ef-S4W"/>
                     <exclude reference="HAr-yO-21V"/>
                     <exclude reference="JGJ-7U-MER"/>
                     <exclude reference="V4V-2W-UfU"/>
                     <exclude reference="qdL-lT-o1b"/>
                     <exclude reference="4JU-jt-ggX"/>
                     <exclude reference="8eN-za-DcM"/>
+                    <exclude reference="BQ3-3g-aMR"/>
                     <exclude reference="ETU-el-7Av"/>
                     <exclude reference="UPk-ay-uar"/>
                     <exclude reference="Wmf-ne-uG1"/>
+                    <exclude reference="yPt-F8-dRh"/>
                     <exclude reference="4Lz-BD-Pxa"/>
                     <exclude reference="4aa-ov-QrK"/>
                     <exclude reference="5go-sM-q8F"/>
@@ -665,18 +678,24 @@
                     <include reference="t81-ak-DNb"/>
                     <include reference="vdt-0h-NEc"/>
                     <include reference="8Po-HJ-txV"/>
+                    <include reference="Hpb-9Q-vnL"/>
                     <exclude reference="Xn2-Gd-L9f"/>
+                    <include reference="qkt-Oy-WRp"/>
                     <exclude reference="ths-dr-PCH"/>
                     <exclude reference="z7r-bh-EHe"/>
+                    <include reference="ASR-1f-8Y8"/>
+                    <include reference="AaB-ef-S4W"/>
                     <exclude reference="HAr-yO-21V"/>
                     <exclude reference="JGJ-7U-MER"/>
                     <exclude reference="V4V-2W-UfU"/>
                     <include reference="qdL-lT-o1b"/>
                     <include reference="4JU-jt-ggX"/>
                     <exclude reference="8eN-za-DcM"/>
+                    <include reference="BQ3-3g-aMR"/>
                     <include reference="ETU-el-7Av"/>
                     <exclude reference="UPk-ay-uar"/>
                     <exclude reference="Wmf-ne-uG1"/>
+                    <include reference="yPt-F8-dRh"/>
                     <exclude reference="4Lz-BD-Pxa"/>
                     <include reference="4aa-ov-QrK"/>
                     <include reference="5go-sM-q8F"/>

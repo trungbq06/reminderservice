@@ -49,6 +49,7 @@
     _tableView.hidden = YES;
     
     if (_renewalId > 0) {
+        _pageTitle.text = @"EDIT A RENEWAL";
         [self loadData];
     }
 }
@@ -176,12 +177,12 @@
         if (errorCode == kSuccess) {
             [self.navigationController popViewControllerAnimated:TRUE];
         } else {
-            [self showAlert:@"Add Renewal" message:[NSString stringWithFormat:@"Add error. %@!", errorMsg]];
+            [self showAlert:@"Renewal" message:[NSString stringWithFormat:@"Add error. %@!", errorMsg]];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [SVProgressHUD dismiss];
         
-        [self showAlert:@"Add Renewal" message:[error localizedDescription]];
+        [self showAlert:@"Renewal" message:[error localizedDescription]];
     }];
 }
 

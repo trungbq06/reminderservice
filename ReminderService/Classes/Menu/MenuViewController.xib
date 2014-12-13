@@ -117,19 +117,19 @@
                     <exclude reference="Hq6-nt-Mxk"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="LwV-VV-hxz"/>
+                    <exclude reference="Z5B-Ll-2Xo"/>
+                    <exclude reference="q9D-3R-Kad"/>
+                    <exclude reference="djG-dR-fPD"/>
+                    <exclude reference="t5u-uh-qh6"/>
+                    <exclude reference="vJD-vh-Tf3"/>
+                    <exclude reference="DKG-yy-QPU"/>
+                    <exclude reference="f1u-TD-kCf"/>
+                    <exclude reference="ynb-Zr-12v"/>
                     <exclude reference="6kc-td-EHm"/>
                     <exclude reference="CBu-hi-IhE"/>
                     <exclude reference="EEJ-R0-Gmk"/>
                     <exclude reference="T2T-P5-AGj"/>
-                    <exclude reference="DKG-yy-QPU"/>
-                    <exclude reference="f1u-TD-kCf"/>
-                    <exclude reference="ynb-Zr-12v"/>
-                    <exclude reference="djG-dR-fPD"/>
-                    <exclude reference="t5u-uh-qh6"/>
-                    <exclude reference="vJD-vh-Tf3"/>
-                    <exclude reference="LwV-VV-hxz"/>
-                    <exclude reference="Z5B-Ll-2Xo"/>
-                    <exclude reference="q9D-3R-Kad"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -140,19 +140,19 @@
                     <include reference="Hq6-nt-Mxk"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="LwV-VV-hxz"/>
+                    <include reference="Z5B-Ll-2Xo"/>
+                    <include reference="q9D-3R-Kad"/>
+                    <include reference="djG-dR-fPD"/>
+                    <include reference="t5u-uh-qh6"/>
+                    <include reference="vJD-vh-Tf3"/>
+                    <include reference="DKG-yy-QPU"/>
+                    <include reference="f1u-TD-kCf"/>
+                    <include reference="ynb-Zr-12v"/>
                     <include reference="6kc-td-EHm"/>
                     <include reference="CBu-hi-IhE"/>
                     <include reference="EEJ-R0-Gmk"/>
                     <include reference="T2T-P5-AGj"/>
-                    <include reference="DKG-yy-QPU"/>
-                    <include reference="f1u-TD-kCf"/>
-                    <include reference="ynb-Zr-12v"/>
-                    <include reference="djG-dR-fPD"/>
-                    <include reference="t5u-uh-qh6"/>
-                    <include reference="vJD-vh-Tf3"/>
-                    <include reference="LwV-VV-hxz"/>
-                    <include reference="Z5B-Ll-2Xo"/>
-                    <include reference="q9D-3R-Kad"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="236" y="288"/>

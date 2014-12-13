@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddReminderViewController">
             <connections>
                 <outlet property="btnAdd" destination="Bct-s4-HWD" id="53Z-KK-In7"/>
+                <outlet property="pageTitle" destination="T6b-o9-876" id="lgf-op-gZB"/>
                 <outlet property="tableView" destination="zfC-ab-EHe" id="dpO-Ku-YQk"/>
                 <outlet property="txtNotes" destination="EA7-0Q-bgw" id="LHC-8Y-rqU"/>
                 <outlet property="txtPrice" destination="Cm8-P8-WRn" id="TiQ-gO-l3F"/>

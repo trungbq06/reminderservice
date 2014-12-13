@@ -28,6 +28,7 @@
 @property (nonatomic, retain) NSMutableArray    *typeData;
 @property (nonatomic, retain) IBOutlet UITableView       *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *btnAdd;
+@property (weak, nonatomic) IBOutlet UILabel *pageTitle;
 
 - (IBAction)btnAddClick:(id)sender;
 - (IBAction)btnCancelClick:(id)sender;
