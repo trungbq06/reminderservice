@@ -25,6 +25,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *typeView;
 @property (weak, nonatomic) IBOutlet UIImageView *typeIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *typeBg;
+
 - (IBAction)btnBackClick:(id)sender;
 - (IBAction)btnEditClick:(id)sender;
 - (IBAction)btnDeleteClick:(id)sender;

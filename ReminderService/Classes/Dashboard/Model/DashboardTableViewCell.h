@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *dueDay;
 @property (weak, nonatomic) IBOutlet UILabel *peopleWith;
 @property (weak, nonatomic) IBOutlet UIView *bgView;
-//@property (weak, nonatomic) IBOutlet UIImageView *rightImg;
+@property (weak, nonatomic) IBOutlet UIImageView *arrow;
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+
+@property (nonatomic, retain) NSString *type;
 
 @end

@@ -60,7 +60,8 @@
         _dueDay.text = [NSString stringWithFormat:@"%d DAYS", [[result objectForKey:@"due"] intValue]];
         
         [_typeIcon setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d", _typeId]]];
-        [_typeView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
+        [_typeBg setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]];
+//        [_typeView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
