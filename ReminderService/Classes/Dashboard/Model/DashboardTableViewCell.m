@@ -33,10 +33,10 @@
     CGRect appframe = [[UIScreen mainScreen] bounds];
     NSLog(@"Appframe %@", NSStringFromCGRect(appframe));
     
-    _bgView.frame = CGRectMake(69, 0, self.frame.size.width - 70, self.frame.size.height - 6);
-    _arrow.frame = CGRectMake(frame.size.width - 30, frame.size.height/2 - 15, 20, 30);
-    
-    _bgImageView.image = [UIImage imageNamed:_type];
+//    _bgView.frame = CGRectMake(69, 0, self.frame.size.width - 70, self.frame.size.height - 6);
+//    _arrow.frame = CGRectMake(frame.size.width - 30, frame.size.height/2 - 15, 20, 30);
+//    
+//    _bgImageView.image = [UIImage imageNamed:_type];
 }
 /*
 - (CAGradientLayer *)gradientLayer

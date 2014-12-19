@@ -151,8 +151,8 @@
         
         int _typeId = [[currObject objectForKey:@"type_id"] intValue];
         [cell.imgView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d", _typeId]]];
-        cell.type = [NSString stringWithFormat:@"type_%d_bg", _typeId];
-//        cell.bgImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]];
+//        cell.type = [NSString stringWithFormat:@"type_%d_bg", _typeId];
+        cell.bgImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]];
 //        [cell.bgView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:[NSString stringWithFormat:@"type_%d_bg", _typeId]]]];
         
 //        CGRect cellFrame = cell.frame;

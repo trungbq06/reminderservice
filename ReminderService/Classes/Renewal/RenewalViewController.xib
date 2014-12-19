@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -273,12 +273,12 @@
                             <exclude reference="Wo1-V6-KMT"/>
                             <exclude reference="akc-DU-0U7"/>
                             <exclude reference="k8a-xC-5KF"/>
+                            <exclude reference="OS0-kD-iQN"/>
+                            <exclude reference="Vhs-tA-bOK"/>
                             <exclude reference="RJZ-r0-LGw"/>
                             <exclude reference="dUj-uk-j8Q"/>
                             <exclude reference="eK2-bi-TCR"/>
                             <exclude reference="hrB-8B-nRn"/>
-                            <exclude reference="OS0-kD-iQN"/>
-                            <exclude reference="Vhs-tA-bOK"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -294,12 +294,12 @@
                             <include reference="Wo1-V6-KMT"/>
                             <include reference="akc-DU-0U7"/>
                             <include reference="k8a-xC-5KF"/>
+                            <include reference="OS0-kD-iQN"/>
+                            <include reference="Vhs-tA-bOK"/>
                             <include reference="RJZ-r0-LGw"/>
                             <include reference="dUj-uk-j8Q"/>
                             <include reference="eK2-bi-TCR"/>
                             <include reference="hrB-8B-nRn"/>
-                            <include reference="OS0-kD-iQN"/>
-                            <include reference="Vhs-tA-bOK"/>
                         </mask>
                     </variation>
                 </view>
