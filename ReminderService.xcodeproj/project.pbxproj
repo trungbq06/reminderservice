@@ -154,6 +154,8 @@
 		6751A9AA1A2008A1004B68E8 /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */; };
 		6751A9AB1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
 		6751A9AC1A2008A1004B68E8 /* AddReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */; };
+		6792FE8F1A44DD270014EA95 /* type_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6792FE8D1A44DD270014EA95 /* type_1.png */; };
+		6792FE901A44DD270014EA95 /* type_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6792FE8E1A44DD270014EA95 /* type_2.png */; };
 		67E8E52F1A34FC0E009FF488 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */; };
 		67E8E5301A34FC0E009FF488 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */; };
 		67E8E5311A34FC0E009FF488 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */; };
@@ -294,6 +296,8 @@
 		6751A9A61A2008A1004B68E8 /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
 		6751A9A71A2008A1004B68E8 /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
 		6751A9A81A2008A1004B68E8 /* AddReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddReminderViewController.xib; sourceTree = "<group>"; };
+		6792FE8D1A44DD270014EA95 /* type_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type_1.png; sourceTree = "<group>"; };
+		6792FE8E1A44DD270014EA95 /* type_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type_2.png; sourceTree = "<group>"; };
 		67E8E52C1A34FC0E009FF488 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		67E8E52D1A34FC0E009FF488 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		67E8E52E1A34FC0E009FF488 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -437,6 +441,8 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6792FE8D1A44DD270014EA95 /* type_1.png */,
+				6792FE8E1A44DD270014EA95 /* type_2.png */,
 				37C958BC1A434333002ED2C8 /* arrow.png */,
 				37ADBFCE1A39C2A5005137F2 /* save.png */,
 				670A5D871A38F7C7009A06C7 /* add.png */,
@@ -729,6 +735,7 @@
 				37EC9E111A1E108600812CD3 /* SVProgressHUD.bundle in Resources */,
 				37E3F2E61A1A1FED00BF609B /* facebook_btn.png in Resources */,
 				670A5DA31A38F7C7009A06C7 /* type_6_bg.png in Resources */,
+				6792FE901A44DD270014EA95 /* type_2.png in Resources */,
 				37F827A61A375CDF007DF38D /* SubTypeTableViewController.xib in Resources */,
 				37EC9DD81A1E084B00812CD3 /* register_bg.png in Resources */,
 				37E3F2EC1A1A1FED00BF609B /* register_btn.png in Resources */,
@@ -757,6 +764,7 @@
 				37E3F2B91A19B27B00BF609B /* Images.xcassets in Resources */,
 				670A5DB71A38F7C7009A06C7 /* type_2_bg.png in Resources */,
 				670A5DA21A38F7C7009A06C7 /* add@2x.png in Resources */,
+				6792FE8F1A44DD270014EA95 /* type_1.png in Resources */,
 				37ADBFCF1A39C2A5005137F2 /* save.png in Resources */,
 				37E3F2F21A1A209900BF609B /* email_icon.png in Resources */,
 				670A5DB31A38F7C7009A06C7 /* type_5_bg.png in Resources */,
