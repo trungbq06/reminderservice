@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37E3F2A41A19B27B00BF609B"
-               BuildableName = "ReminderService.app"
+               BuildableName = "Compare With Us.app"
                BlueprintName = "ReminderService"
                ReferencedContainer = "container:ReminderService.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37E3F2A41A19B27B00BF609B"
-            BuildableName = "ReminderService.app"
+            BuildableName = "Compare With Us.app"
             BlueprintName = "ReminderService"
             ReferencedContainer = "container:ReminderService.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37E3F2A41A19B27B00BF609B"
-            BuildableName = "ReminderService.app"
+            BuildableName = "Compare With Us.app"
             BlueprintName = "ReminderService"
             ReferencedContainer = "container:ReminderService.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37E3F2A41A19B27B00BF609B"
-            BuildableName = "ReminderService.app"
+            BuildableName = "Compare With Us.app"
             BlueprintName = "ReminderService"
             ReferencedContainer = "container:ReminderService.xcodeproj">
          </BuildableReference>

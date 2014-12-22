@@ -23,6 +23,8 @@
 		378FCF661A1B7CDA00E12BBE /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */; };
 		378FCF841A1B816000E12BBE /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378FCF831A1B816000E12BBE /* Twitter.framework */; };
 		37ADBFCF1A39C2A5005137F2 /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ADBFCE1A39C2A5005137F2 /* save.png */; };
+		37B692171A4713BD004215F7 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B692161A4713BD004215F7 /* Splash.png */; };
+		37B692191A471933004215F7 /* Splash_568.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B692181A471933004215F7 /* Splash_568.png */; };
 		37C478B01A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
 		37C478B11A24524600D1491C /* DatePickerPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C478AF1A24524600D1491C /* DatePickerPopoverController.m */; };
 		37C958BD1A434333002ED2C8 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 37C958BC1A434333002ED2C8 /* arrow.png */; };
@@ -186,10 +188,12 @@
 		378FCF621A1B7CDA00E12BBE /* FHSTwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		378FCF831A1B816000E12BBE /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		37ADBFCE1A39C2A5005137F2 /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		37B692161A4713BD004215F7 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
+		37B692181A471933004215F7 /* Splash_568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash_568.png; sourceTree = "<group>"; };
 		37C478AE1A24524600D1491C /* DatePickerPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerPopoverController.h; sourceTree = "<group>"; };
 		37C478AF1A24524600D1491C /* DatePickerPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerPopoverController.m; sourceTree = "<group>"; };
 		37C958BC1A434333002ED2C8 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		37E3F2A51A19B27B00BF609B /* ReminderService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderService.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37E3F2A51A19B27B00BF609B /* Compare With Us.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compare With Us.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37E3F2A91A19B27B00BF609B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E3F2AA1A19B27B00BF609B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37E3F2AC1A19B27B00BF609B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -388,7 +392,7 @@
 		37E3F2A61A19B27B00BF609B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37E3F2A51A19B27B00BF609B /* ReminderService.app */,
+				37E3F2A51A19B27B00BF609B /* Compare With Us.app */,
 				37E3F2C11A19B27B00BF609B /* ReminderServiceTests.xctest */,
 			);
 			name = Products;
@@ -441,6 +445,8 @@
 		37E3F2D11A1A0C4900BF609B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37B692181A471933004215F7 /* Splash_568.png */,
+				37B692161A4713BD004215F7 /* Splash.png */,
 				6792FE8D1A44DD270014EA95 /* type_1.png */,
 				6792FE8E1A44DD270014EA95 /* type_2.png */,
 				37C958BC1A434333002ED2C8 /* arrow.png */,
@@ -669,7 +675,7 @@
 			);
 			name = ReminderService;
 			productName = ReminderService;
-			productReference = 37E3F2A51A19B27B00BF609B /* ReminderService.app */;
+			productReference = 37E3F2A51A19B27B00BF609B /* Compare With Us.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37E3F2C01A19B27B00BF609B /* ReminderServiceTests */ = {
@@ -779,11 +785,13 @@
 				670A5DA71A38F7C7009A06C7 /* type_4_bg.png in Resources */,
 				67E8E5311A34FC0E009FF488 /* ProfileViewController.xib in Resources */,
 				37EC9DCE1A1E06BC00812CD3 /* RegisterViewController.xib in Resources */,
+				37B692191A471933004215F7 /* Splash_568.png in Resources */,
 				6751A9911A1FF611004B68E8 /* MenuViewController.xib in Resources */,
 				37EC9DD41A1E084B00812CD3 /* mobile.png in Resources */,
 				670A5DA91A38F7C7009A06C7 /* type_4.png in Resources */,
 				6751A97B1A1FF42B004B68E8 /* DashboardViewController.xib in Resources */,
 				37E3F2EA1A1A1FED00BF609B /* login_btn.png in Resources */,
+				37B692171A4713BD004215F7 /* Splash.png in Resources */,
 				37EC9DB81A1DF9BE00812CD3 /* hand_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1017,7 +1025,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Trung Bui (W2T3T662J6)";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Premium Saver Limited (5986S8FT58)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Premium Saver Limited (5986S8FT58)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1027,8 +1037,8 @@
 				INFOPLIST_FILE = ReminderService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32778e7d-b156-4dcb-bae2-a426e47cdd88";
+				PRODUCT_NAME = "Compare With Us";
+				PROVISIONING_PROFILE = "4aeda306-4b84-448f-b9e5-b1f61f94f0d7";
 			};
 			name = Debug;
 		};
@@ -1036,7 +1046,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Trung Bui (W2T3T662J6)";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Premium Saver Limited (5986S8FT58)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Premium Saver Limited (5986S8FT58)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1046,8 +1058,8 @@
 				INFOPLIST_FILE = ReminderService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32778e7d-b156-4dcb-bae2-a426e47cdd88";
+				PRODUCT_NAME = "Compare With Us";
+				PROVISIONING_PROFILE = "4aeda306-4b84-448f-b9e5-b1f61f94f0d7";
 			};
 			name = Release;
 		};
