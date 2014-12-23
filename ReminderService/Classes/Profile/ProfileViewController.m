@@ -23,7 +23,7 @@
     
     [SVProgressHUD showWithStatus:@"Loading ..." maskType:SVProgressHUDMaskTypeBlack];
     
-    _typeData = [[NSMutableArray alloc] initWithObjects:@"Mr", @"Mrs", @"Miss", @"Mis", @"Doctor", nil];
+    _typeData = [[NSMutableArray alloc] initWithObjects:@"Mr", @"Mrs", @"Miss", @"Doctor", nil];
     [_tableView reloadData];
     _tableView.hidden = YES;
     
@@ -202,6 +202,9 @@
             
             if (errorCode == kSuccess) {
                 [self showAlert:@"Edit Profile" message:@"You’ve been successfully updated"];
+                
+                // Return to dashboard
+                [self goDashboard];
             } else {
                 [self showAlert:@"Edit Profile" message:[NSString stringWithFormat:@"Save error. There is problem with server!"]];
             }
@@ -209,6 +212,21 @@
             
         }];
     }
+}
+
+- (void) goDashboard {
+    MenuViewController *menuController = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+    
+    DashboardViewController *contentController = [[DashboardViewController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:contentController];
+    navController.navigationBarHidden = TRUE;
+    
+    MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                    containerWithCenterViewController:navController
+                                                    leftMenuViewController:menuController
+                                                    rightMenuViewController:nil];
+    
+    [[[[UIApplication sharedApplication] delegate] window] setRootViewController:container];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField

@@ -134,6 +134,7 @@
         [self showAlert:@"Error" message:@"Please enter Renewal Date"];
         return;
     }
+    /*
     if ([provider isEqualToString:@""]) {
         [self showAlert:@"Error" message:@"Please enter Provider"];
         return;
@@ -146,6 +147,7 @@
         [self showAlert:@"Error" message:@"Please enter Notes"];
         return;
     }
+    */
     
     NSString *userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"user_id"];
     NSString *typeId = [[NSUserDefaults standardUserDefaults] objectForKey:@"type_id"];
@@ -212,8 +214,8 @@
         _txtPrice.text = [result objectForKey:@"price"];
         _txtNotes.text = [result objectForKey:@"notes"];
         
-        _txtStartDate.userInteractionEnabled = NO;
-        _txtRenewalDate.userInteractionEnabled = NO;
+//        _txtStartDate.userInteractionEnabled = NO;
+//        _txtRenewalDate.userInteractionEnabled = NO;
         [_btnAdd setBackgroundImage:nil forState:UIControlStateNormal];
         [_btnAdd setTitle:@"Save" forState:UIControlStateNormal];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -231,7 +233,7 @@
     _datePicker.datePickerMode = UIDatePickerModeDate;
     NSArray* languages = [[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"];
     NSString *language = [[NSLocale currentLocale] displayNameForKey:NSLocaleIdentifier value: [languages objectAtIndex:0]];
-    [_datePicker setLocale:[NSLocale localeWithLocaleIdentifier:language]];
+    [_datePicker setLocale:[NSLocale localeWithLocaleIdentifier:@"en_GB"]];
     [_datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -242,6 +244,7 @@
     if ([txtDate isEqualToString:@""]) {
         _datePicker.date = currDate;
     } else {
+        NSLog(@"Date %@", [formatter dateFromString:txtDate]);
         _datePicker.date = [formatter dateFromString:txtDate];
     }
     

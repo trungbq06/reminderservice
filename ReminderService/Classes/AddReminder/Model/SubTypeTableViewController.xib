@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -88,15 +88,19 @@
                 <constraint firstItem="PmH-Cn-p6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-38" id="38g-mu-lDN"/>
                 <constraint firstItem="UiT-vJ-zzO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="3sg-9n-4t4"/>
                 <constraint firstAttribute="bottom" secondItem="DPB-OL-EIW" secondAttribute="bottom" id="8Yt-OS-TVm"/>
+                <constraint firstItem="DPB-OL-EIW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="58" id="HaQ-74-MMA"/>
                 <constraint firstItem="PmH-Cn-p6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Leu-JH-X4P"/>
                 <constraint firstItem="O4F-fn-Eze" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="MCX-wb-Vhi"/>
-                <constraint firstItem="UiT-vJ-zzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Pfq-zB-PD3"/>
-                <constraint firstItem="DPB-OL-EIW" firstAttribute="top" secondItem="O4F-fn-Eze" secondAttribute="bottom" constant="8" symbolic="YES" id="asn-X5-yoS"/>
+                <constraint firstItem="UiT-vJ-zzO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Pfq-zB-PD3">
+                    <variation key="heightClass=regular-widthClass=compact" constant="28"/>
+                </constraint>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="centerX" secondItem="PmH-Cn-p6n" secondAttribute="centerX" id="c6d-fa-9pN"/>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="on4-Om-ogG"/>
                 <constraint firstAttribute="centerX" secondItem="DPB-OL-EIW" secondAttribute="centerX" id="sNx-fv-OcH"/>
                 <constraint firstAttribute="trailing" secondItem="DPB-OL-EIW" secondAttribute="trailing" id="vX5-0G-T2R"/>
-                <constraint firstItem="O4F-fn-Eze" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yuv-hG-mIU"/>
+                <constraint firstItem="O4F-fn-Eze" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="yuv-hG-mIU">
+                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                </constraint>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <variation key="default">
@@ -112,7 +116,7 @@
                     <exclude reference="3sg-9n-4t4"/>
                     <exclude reference="Pfq-zB-PD3"/>
                     <exclude reference="8Yt-OS-TVm"/>
-                    <exclude reference="asn-X5-yoS"/>
+                    <exclude reference="HaQ-74-MMA"/>
                     <exclude reference="c6d-fa-9pN"/>
                     <exclude reference="on4-Om-ogG"/>
                     <exclude reference="sNx-fv-OcH"/>
@@ -134,7 +138,7 @@
                     <include reference="3sg-9n-4t4"/>
                     <include reference="Pfq-zB-PD3"/>
                     <include reference="8Yt-OS-TVm"/>
-                    <include reference="asn-X5-yoS"/>
+                    <include reference="HaQ-74-MMA"/>
                     <include reference="c6d-fa-9pN"/>
                     <include reference="on4-Om-ogG"/>
                     <include reference="sNx-fv-OcH"/>

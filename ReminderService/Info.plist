@@ -53,7 +53,5 @@
 	</array>
 	<key>UILaunchImageFile~iphone</key>
 	<string>Splash.png</string>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 </dict>
 </plist>

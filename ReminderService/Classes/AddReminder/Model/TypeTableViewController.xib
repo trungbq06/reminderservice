@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -85,14 +85,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="DPB-OL-EIW" secondAttribute="bottom" id="8Yt-OS-TVm"/>
+                <constraint firstAttribute="bottom" secondItem="DPB-OL-EIW" secondAttribute="bottom" id="8Yt-OS-TVm">
+                    <variation key="heightClass=regular-widthClass=compact" constant="-14"/>
+                </constraint>
                 <constraint firstItem="PmH-Cn-p6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-38" id="G0W-j4-7z4"/>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="centerX" secondItem="PmH-Cn-p6n" secondAttribute="centerX" id="J5M-9M-IPN"/>
-                <constraint firstItem="Fvs-ts-f1h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Q7P-YF-wOj"/>
+                <constraint firstItem="Fvs-ts-f1h" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="13" id="Q7P-YF-wOj">
+                    <variation key="heightClass=regular-widthClass=compact" constant="28"/>
+                </constraint>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="top" secondItem="Yyr-nr-yyd" secondAttribute="bottom" constant="8" symbolic="YES" id="Qyo-fq-K6K"/>
                 <constraint firstItem="Yyr-nr-yyd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="R0Q-op-vmV"/>
                 <constraint firstItem="Fvs-ts-f1h" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="YPu-lI-Ky7"/>
-                <constraint firstItem="Yyr-nr-yyd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ed0-oU-dwE"/>
+                <constraint firstItem="Yyr-nr-yyd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="ed0-oU-dwE">
+                    <variation key="heightClass=regular-widthClass=compact" constant="24"/>
+                </constraint>
                 <constraint firstItem="DPB-OL-EIW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="on4-Om-ogG"/>
                 <constraint firstAttribute="centerX" secondItem="DPB-OL-EIW" secondAttribute="centerX" id="sNx-fv-OcH"/>
                 <constraint firstItem="PmH-Cn-p6n" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="sfJ-1t-QFp"/>
